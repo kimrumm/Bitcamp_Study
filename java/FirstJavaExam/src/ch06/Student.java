@@ -79,21 +79,20 @@ public class Student {
 		stu[0] = new Student("김아름", 80, 60, 80);
 		stu[1] = new Student("박사장", 80, 68, 80);
 		stu[2] = new Student("아무개", 80, 20, 80);
-		stu[3] = new Student("청바지", 80, 52, 80);
 		stu[4] = new Student("김박박", 80, 20, 80);
 		stu[5] = new Student("알라뷰", 80, 84, 80);
 		stu[6] = new Student("아이고", 80, 68, 80);
 		stu[7] = new Student("잠만보", 80, 25, 80);
 		stu[8] = new Student("김똑똑", 80, 60, 80);
 		stu[9] = new Student("에이스", 80, 60, 80);
-		stu[10] = new Student("김름", 80, 60, 80);
+		stu[10] = new Student("침대", 80, 60, 80);
 
 //③배열에 저장된 Student 타입의 인스턴스의 메소드를 이용해서 모든 데이터를 출력해봅시다.
 		for(int i=0; i< stu.length;i++) {
 			System.out.println(stu[i]);
 		}
 		System.out.println();
-		System.out.println(stu);
+		System.out.println(stuInfo);
 
 	}
 }
