@@ -1,8 +1,8 @@
-package ex01;
+package array;
 
 import java.util.Scanner;
 
-public class MiniAndMax {
+public class ArrQ1 {
 
 // 최소값 반환
 	public static int miniValue(int[] arr) {
@@ -29,7 +29,7 @@ public class MiniAndMax {
 	}
 
 	public static void main(String[] args) {
-		MiniAndMax arr = new MiniAndMax();
+		arrQ1 arr = new arrQ1();
 
 		// 사용자로 부터 입력받기
 		int[] arrInt = new int[5];
