@@ -1,4 +1,4 @@
-package ex.infomanager;
+package ex.infomanager2;
 
 import java.util.Scanner;
 

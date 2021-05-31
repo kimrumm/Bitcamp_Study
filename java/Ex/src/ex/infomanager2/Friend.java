@@ -1,8 +1,8 @@
-package ex.infomanager;
+package ex.infomanager2;
 
 
 //상속을 목적으로 하는 클래스
-public class Friend {
+public abstract class Friend implements ShowData {
 	
 	//이름, 전화번호, 주소
 	 String name;  	
@@ -20,8 +20,6 @@ public class Friend {
 		System.out.println("주   소 : "+ address);
 	}
 	
-	public void showBasicInfo() {
-		
-	}
+//	public abstract void showBasicInfo();
 
 }
