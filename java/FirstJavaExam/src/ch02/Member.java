@@ -1,26 +1,45 @@
 package ch02;
 
+import java.util.Scanner;
+
 public class Member {
 
 	public static void main(String[] args) {
-		
-//		1. String 타입의 이름을 저장할 수 있는 변수 name을 정의해봅시다.
-		String name = "김아름";
-		
-//		2. int 타입의 나이를 저장할 수 있는 변수 age를 정의해봅시다.
-		int age = 28;
-		
-//		3. double 타입의 키를 저장할 수 있는 변수 height를 정의해봅시다.
-		double height = 158;
-		
-//		4. boolean 타입의 JAVA책의 보유 여부를 저장할 수 있는 변수 hasBook를 정의해봅시다. 
-		boolean hasBook = false;
-		
-//		5. 이름과 나이, 키, 책의 보유 여부를 출력해봅시다.
-		System.out.println("이름: " + name + " 나이: " +" 키: " + height 
-							+ " 책이 있습니까? " + hasBook);
 
-		
+//		1. String 타입의 이름을 저장할 수 있는 변수 name을 정의해봅시다.
+//		String name;
+
+//		2. int 타입의 나이를 저장할 수 있는 변수 age를 정의해봅시다.
+//		int age;
+
+//		3. double 타입의 키를 저장할 수 있는 변수 height를 정의해봅시다.
+//		double height;
+
+//		4. boolean 타입의 JAVA책의 보유 여부를 저장할 수 있는 변수 hasBook를 정의해봅시다. 
+//		boolean hasBook;
+
+//		5. 이름과 나이, 키, 책의 보유 여부를 출력해봅시다.
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("<이름,나이,키,책의 보유 여부 확인>");
+		System.out.println("---------------------------");
+		System.out.println("이름을 입력하세요."); // String + String
+		String name = sc.next();
+		System.out.println("나이를 입력하세요");
+		int age = sc.nextInt();
+		System.out.println("키를 입력하세요");
+		double height = sc.nextDouble();
+		System.out.println("책보유하고 있습니까?(네,아니오)");
+		String hasBook = sc.next();
+
+		if (hasBook.equals("네")) {
+			System.out.println("책이 있습니다.");
+		} else {
+			System.out.println("책 없습니다.");
+		}
+
+		System.out.println("---------------------------");
+		System.out.println("<결과> " + "이름: " + name + ", 나이: " + age + "살, 키: " + height + "cm, 책보유여부: " + hasBook);
 
 	}
 
