@@ -31,15 +31,18 @@ public class Member {
 		double height = sc.nextDouble();
 		System.out.println("책보유하고 있습니까?(네,아니오)");
 		String hasBook = sc.next();
-
+		
+		//삼항연산자(true,false) or 메세지 출력을 위한 변수 생성 
+		String msg = null;
+		
 		if (hasBook.equals("네")) {
-			System.out.println("책이 있습니다.");
+			msg = "책이있습니다.";
 		} else {
-			System.out.println("책 없습니다.");
+			msg = "책이 없습니다.";
 		}
 
 		System.out.println("---------------------------");
-		System.out.println("<결과> " + "이름: " + name + ", 나이: " + age + "살, 키: " + height + "cm, 책보유여부: " + hasBook);
+		System.out.println("<결과> " + "이름: " + name + ", 나이: " + age + "살, 키: " + height + "cm, 책보유여부: " + msg);
 
 	}
 

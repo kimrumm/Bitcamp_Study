@@ -11,6 +11,8 @@ public class Person {
 	String perPhoneNum; // ②회원 전화번호 ( 000-0000-0000 )를 저장하는 변수
 	long perNum1; // ③회원 주민등록번호 ( 000000-0000000 또는 0000000000000 )를 저장하는 변수
 	String pernum2;
+	
+	
 
 	}
 
