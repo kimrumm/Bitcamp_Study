@@ -12,6 +12,7 @@ public class MessageClient {
 	public static void main(String[] args) {
 
 		Socket socket = null;
+		
 		DataInputStream din = null;
 		DataOutputStream dout = null;
 
@@ -23,12 +24,12 @@ public class MessageClient {
 
 			Scanner sc = new Scanner(System.in);
 
-			String str1 = null; // ¹Ş´Â µ¥ÀÌÅÍ
-			String str2 = ""; // º¸³»´Â µ¥ÀÌÅÍ
+			String str1 = null; // ë°›ëŠ” ë°ì´í„° 
+			String str2 = ""; // ë³´ë‚´ëŠ” ë°ì´í„° 
 
 			while (!str2.equals("exit")) {
 
-				// µ¥ÀÌÅÍ Àü¼Û
+				// ë°ì´í„° ì „ì†¡ 
 				str2 = sc.nextLine();
 				dout.writeUTF(str2);
 
@@ -36,11 +37,7 @@ public class MessageClient {
 				System.out.println("ServerMessage" + str1);
 			}
 
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			Util.close(socket);
