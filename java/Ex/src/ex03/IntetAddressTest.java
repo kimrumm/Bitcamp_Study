@@ -12,7 +12,7 @@ public class IntetAddressTest {
 			InetAddress ip = InetAddress.getByName(urLstr);
 			
 			System.out.println("호스트 이름 : " + ip.getHostName());
-			System.out.println("IP address : " + ip.getHostAddress());
+			System.out.println("IP address : " +n ip.getHostAddress());
 			
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
