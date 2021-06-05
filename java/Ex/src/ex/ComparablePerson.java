@@ -1,4 +1,4 @@
-package ex03;
+package ex;
 
 import java.util.Iterator;
 import java.util.TreeSet;

@@ -1,0 +1,29 @@
+package array;
+
+public class ArrQ3 {
+
+	public static void main(String[] args) {
+		int[][] arr = {
+				{1, 2, 3},
+				{4, 5, 6},
+				{7, 8, 9} 
+		};
+		
+		int tmp1 = 0; 
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length; j++) {
+				
+				System.out.println(arr[i][j]);
+			}
+		}
+		for (int[] tmp2 : arr) {
+			for (int i : tmp2) {
+				for (int j : tmp2) {
+					tmp1 = i+j;
+				}
+			}
+			System.out.println(tmp1);
+		}
+	}
+
+}

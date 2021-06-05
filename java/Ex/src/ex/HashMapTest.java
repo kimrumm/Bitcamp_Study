@@ -1,4 +1,4 @@
-package ex03;
+package ex;
 
 import java.util.HashMap;
 
