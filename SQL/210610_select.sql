@@ -11,9 +11,10 @@ where deptno=10
 
 -- 이름이 'SCOTT'인 사원을 출력
 SELECT *
-From EMP
-WHERE ENAME='scott'
+FROM EMP
+WHERE ENAME='SCOTT'
 ;
+
 
 -- 날짜타입의 데이터 비교시에도 작은 따움표를 이용해야한다!!
 SELECT *
@@ -23,9 +24,20 @@ where hiredate = '96/11/17'
 
 -- 논리 연산자 : and, or, not
 -- 10번 부서의 관리자(manager)를 찾아 출력
-
+select *
+from emp
+where deptno=10 and job='MANAGER'
+;
+select empno, ename, job
+from emp
+where deptno=10 and job='MANAGER'
+;
 
 -- 10번 부서의 직원들과 관리자들의 리스트를 출력
+select*
+from emp
+where deptno=10 or job='MANAGER'
+;
 
 
 -- 10번 부서의 직원을 제외한 나머지 직원들을 출력
@@ -51,6 +63,7 @@ order by hiredate
 ;
 
 -- 연산자 in -> 여러개의 or 연산자 사용시 대체 할 수 있다.
+-- 커미션이 300 또는 500 또는 14000
 select *
 from emp
 -- where comm=300 or comm=500 or comm=1400
@@ -65,7 +78,7 @@ where comm in (300, 500, 1400)
 -- 'java' 단어를 포함하는지 -> title like '%java%' ->가장 많이 사용
 
 -- F로 시작하는 이름을 가진 사원을 검색하자 
-select *
+select ename
 from emp
 --where ename like 'S%'
 --where ename like '%ES'
@@ -109,3 +122,7 @@ select *
 from emp
 order by sal desc, ename asc --생략가능
 ;
+
+select * from customer;
+select * from book;
+select * from orders;

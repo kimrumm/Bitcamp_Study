@@ -1,23 +1,23 @@
 -- 2021.06.09
 -- SQL Basic
 
--- 계정 HR이 보유(권한)(한 테이블 객체 리스트
-SELECT * FROM TAB;
+-- 계정 HR이 보유(권한)한 테이블 객체 리스트
+select * from tab;
 
 
--- 테이블의 정보를 검색
-DESC dept;
+-- 테이블의 정보를 검색 : 컬럼의 이름, null유무, 타이, 
+desc dept;
 desc emp;
 
 -- 데이터 조회를 위한 명령 : Select
 -- select {컬럼명,...,* } from 테이블 이름 ;
-select * FROM emp;
+Select * From Emp;
 
 -- 필요한 컬럼을 출력
 -- select 컬럼명, 컬럼명 from 테이블 이름;
 -- 사원의 사원 번호와 사원 이름을 출력
-SELECT empno, sal, deptno
-FROM  emp
+select ename, empno 
+from  emp
 ;
 
 -- select 컬럼의 산술연산이 가능 : 컬럼과 숫자의 연산 , 컬럼과 컬럼간의 산술연산 가능
@@ -27,12 +27,12 @@ from emp
 ;
 
 -- null -> 값이 없다 x, 정해지지 않았다 o
-select sal, comm, sal*comm, sal*12, sal-100, sal+1000
+select sal, comm, sal*comm, sal*12, sal/10, sal-100, sal+1000
 from emp
 ;
 
 -- 사원의 이름, 직급, 급여, 커미션, 연봉(급여*12), 연봉(급여*12*커미션) 
-select ename, job, sal, comm, sal*12 as ysall1, sal*12+comm as ysal12 
+select ename, job, sal, comm, sal*12 as ysal1, sal*12+comm as ysal2 
 from emp
 ;
 
@@ -59,7 +59,7 @@ select * from dept;
 
 select distinct deptno, job
 from emp
-order by job -- 정렬 : 행의 정렬 
+order by deptno -- 정렬 : 행의 정렬 
 ;
 
 -- 특정 데이터를 검색하기 위해서는 
@@ -67,7 +67,7 @@ order by job -- 정렬 : 행의 정렬
 -- where 뒤에는 조건식이 정의 -> where 컬럼명 비교연산자 값 
 -- where sal >= 3000 
 -- 사원 이름, 사원번호 급
-select * 
+select ename, empno, sal
 from emp
 where sal >= 3000
 ;
