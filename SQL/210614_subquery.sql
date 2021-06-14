@@ -124,3 +124,20 @@ select max(saleprice)
 from orders
 where custid=3
 ;
+
+-- EXISTS 연산자로 대한민국에 거주하는 고객에게
+-- 판매한 도서의 총 판매액을 구하시오
+select  sum(saleprice)
+from orders o
+where EXISTS (
+                select * 
+                from customer c 
+                where o.custid=c.custid  -- EXISTS는 반드시 상관관계를 처리해줘야한다.
+                    and c.address like '%대한민국%')  -- 결과가 있다,없다만 판단
+;
+
+-- 서브쿼리(디버깅)
+select * from customer c where 2=c.custid and c.address like '%대한민국%';
+select * from customer c where 3=c.custid and c.address like '%대한민국%';
+select * from customer c where 4=c.custid and c.address like '%대한민국%';
+select * from customer c where 5=c.custid and c.address like '%대한민국%';
