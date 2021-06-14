@@ -5,7 +5,7 @@
 select * from tab;
 
 
--- 테이블의 정보를 검색 : 컬럼의 이름, null유무, 타이, 
+-- 테이블의 정보를 검색 : 컬럼의 이름, null유무, 타입
 desc dept;
 desc emp;
 
