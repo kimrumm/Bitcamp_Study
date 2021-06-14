@@ -3,10 +3,17 @@
 -- JOIN : 스키마의 합
 
 -- CROSS JOIN
--- 스키마의 합 : 집합의 곱 연산과 같다
-
+-- 스키마의 합 : 집합의 곱 연산과 같다 -> 행곱하기 행의 결과가 나온다.
+-- 단순하게 붙힌것은 의미가 없다. 
+-- 의미가 있는것은 deptno가 같은 것 -> 조건으로 잡아주기 -> 유효한(원하는) 데이터를 얻을 수 있다.
 select *
 from emp, dept
+;
+
+-- 원하는 값 출력 
+select *
+from emp, dept
+where emp.deptno = dept.deptno
 ;
 
 -- ansi cross join
