@@ -14,36 +14,37 @@ where job =(select job from emp where empno=7788)
 -- 사원이름과 담당 업무
 select ename,job
 from emp
-where sal > (select sal from emp where empno=7499)
-;
-select sal from emp where empno=7499;
+where sal > (select sal 
+             from emp 
+             where empno=7499);
 
 --45. 최소급여를 받는 
 -- 사원의 이름, 담당업무 및 급여를 표시하시오. (그룹함수 사용)
 select ename,job, sal
 from emp
-where sal=(select min(sal) from emp)
-;
-select min(sal) from emp;
+where sal= (select min(sal) 
+            from emp);
 
 
 --46. 평균급여가 가장 적은 
--- 직급의 직급 이름과 직급의 평균을 구하시오.
-select job,avg
-from emp;
+-- 직급의 직급 이름과 
+-- 직급의 평균을 구하시오.
+select job,avg(sal)
+from emp
+group by job
+having avg(sal) = (select min(avg(sal))
+                   from emp
+                   group by job);
 
 
---47. 각 부서의 최소 급여를 받는 사원의 이름, 급여, 부서번호를 표시하시오.
---
---
---​
---
---​
---
---​
---
---​
---
+--47. 각 부서의 최소 급여를 받는 
+-- 사원의 이름, 급여, 부서번호를 표시하시오.
+select ename, min(sal), deptno
+from emp
+where min(sal) = (select min(job)
+                  from emp
+                  GROUP BY job)
+group by job;
 --48. 담당업무가 ANALYST 인 사원보다 급여가 적으면서 업무가 ANALYST가 아닌 사원들을 표시(사원번호, 이름, 담당 업무, 급여)하시오.
 --
 --
