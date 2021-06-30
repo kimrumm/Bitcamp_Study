@@ -6,40 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 여러개 선택자 지정 */
+        /* 여러개의 선택자 지정 */
         body,
         h1,
         p {
-            margin: 0%;
+            margin: 0;
             padding: 0;
         }
 
-        hr{
-            margin: 20px 0;
+        h1::selection, p::selection {
+            background-color: ;
         }
 
-        /* 전체선택자
+        hr {
+            margin: 50px 0;
+        }
+
+        /* 전체선택자 */
         * {
-            color: red;
-        } */
+            /* color: red; */
+        }
 
         /* 태그선택자 */
-        /* h1 {
-            background-color: yellow;
+        h1 {
+            /* background-color: yellow;
             margin-top: 30px;
-            margin-left: 30px;
-        } */
+            margin-left: 30px; */
+        }
 
         p {
-            background-color: aquamarine;
+            background-color: chartreuse;
         }
 
         /* 아이디 선택자 */
-
-        /* #title {
-            font-size: 16px;
-
-        } */
+        #title {
+            /* font-size: 16px; */
+        }
 
         /* 클래스 선택자 */
         .font_a {
@@ -47,15 +49,16 @@
         }
 
         .font_b {
-            font-weight: bold;
+            font-weight: 100;
         }
 
         #header {
             background-color: red;
             color: white;
             width: 400px;
-            /* margin : 상하간격 좌우간격*/
+            /*  margin: 상하간격 좌우간격  */
             margin: 10px auto;
+
         }
 
         #aside {
@@ -87,17 +90,15 @@
             width: 150px;
             height: 50px;
             font-size: 150%;
-            /*16px * 1.5 ->24px */
-
+            /* 16px * 1.5 -> 24px */
         }
 
         input[type=text] {
-            background-color: cornflowerblue;
-
+            background-color: yellow;
         }
 
         input[type=password] {
-            background-color: cyan;
+            background-color: springgreen;
         }
 
         .img {
@@ -110,20 +111,19 @@
         }
 
         img[src$=png] {
-            border: 5px solid blueviolet;
+            border: 5px solid blue;
         }
 
         img[src$=gif] {
-            border: 5px solid palegreen;
+            border: 5px solid black;
         }
 
         /* 
         후손 선택자
-        부모선택 (공백) 선택자  */
-
+        부모선택 (공백) 선택자
+        */
         #header1 h1 {
             color: red;
-
         }
 
         #section h1 {
@@ -132,78 +132,84 @@
 
         /* 
         자손 선택자
-        부모선택>선택자 
-        */
+        부모선택>선택자
+         */
 
         #header1>h1 {
             background-color: palegoldenrod;
         }
 
-        #setion>h1 {
+        #section>h1 {
             background-color: palegreen;
         }
 
         /* 
-        동위 선택자
+        동위 선책자
         기준 선택요소 뒤에 오는 요소를 선택
-        1. 바로 뒤에 위치하는 요소 선택
-        2. 뒤에 존애하는 요소를 선택
+        1. 바로뒤에 위치하는 요소 선택
+        2. 뒤에 존재하는 요소를 선택
          */
 
-        /* 바로 뒤에 위치하는 요소를 선택: +  */
+        /* 바로뒤에 위치하는 요소를 선택 : + */
         #title1+h2 {
-            background-color: cyan;
+            background-color: rebeccapurple;
         }
 
-        /* 기존 요소 뒤로 존재하는 요소를 선택 : ~ */
+        /* 기준 요소 뒤로 존재하는 요소를 선택 : ~ */
         #title1~h2 {
-            background-color: gold;
+            background-color: pink;
         }
 
-        /* 선택영역에 마우스 커서가 위치하는 경우 -> :hover */
+        /* 선택영역에 마우스 커서가 위치하는경우 -> :hover */
         #btn00:hover {
-            background-color: crimson ;
+            background-color: crimson;
             color: white;
         }
-        #btn00:active{
-            background-color: cornflowerblue;
+
+        #btn00:active {
+            background-color: teal;
             color: white;
         }
+
         h1>a:hover {
-            background-color:palevioletred;
+            color: deeppink;
         }
 
         /* 입력 양식 태그의 상태로 선택 */
-        input:disabled{
-            background-color: black
+        input:disabled {
+            background-color: black;
         }
-        input:enabled{
-            width: 200px;
+
+        input:enabled {
+            /* width : 200px;
             height: 35px;
-            font-size: 1.2em; /* 120 % */
+            font-size: 1.2em; */
+            /* 120% */
         }
 
         input:focus {
             border: 5px solid red;
         }
 
-        div.box{
+        div.box {
             width: 500px;
             height: 150px;
-            border: 1px solid black;
-
+            /* border: 1px solid black; */
         }
+
         #chk {
             display: none;
         }
 
-
-        input[type=checkbox]:checked{
+        input[type=checkbox]:checked {
             width: 30px;
-            height: 50px;
+            height: 30px;
         }
 
-        input[type=checkbox]:checked+div{
+        input[type=checkbox]:checked+div {
+            /* background-color: blanchedalmond; */
+            /* height: 0px;
+            overflow: hidden; */
             display: none;
         }
 
@@ -211,42 +217,75 @@
             font-size: 200%;
             font-weight: bold;
         }
-        ol{
+
+        ol {
             overflow: hidden;
+            list-style: none;
         }
 
         ol>li {
             float: left;
-            /* width: 100px; */
-            padding: 5px 20px;
+            /* width : 100px; */
+            padding: 5px 30px;
         }
 
         ol>li:nth-child(2n) {
-            background-color: cadetblue;
+            background-color: deeppink;
         }
 
         ol>li:nth-child(2n+1) {
-            background-color: red;
+            background-color: coral;
+        }
+
+        ol>li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        ol>li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        ol>li:hover {
+            background-color: salmon;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: magenta;
+        }
+        a:visited {
+            color: blueviolet;
+        }
+
+        a:hover{
+            text-decoration: underline;
         }
 
     </style>
 </head>
 
 <body>
+
     <ol>
-        <li>one</li>
-        <li>two</li>
-        <li>333</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
+        <li><a href="http://www.naver.com">naver</a></li>
+        <li>일</li>
+        <li>이</li>
+        <li>사</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
     </ol>
 
 
-    <label for="chk"> check</label>
+
+
+    <hr>
+
+
+    <label for="chk"> check </label>
     <input id="chk" type="checkbox">
-    <input type="checkbox">
     <div class="box">
         <h1>개인정보보호정책</h1>
         <p>
@@ -258,15 +297,17 @@
 
     <input>
 
-    <input disabled value="sleepy">
+    <input disabled value="cool">
+
 
     <hr>
+
 
     <h1><a href="#">click</a></h1>
+    <H1 id="btn00">Button</H1>
 
-    <h1 id="btn00">Button</h1>
+
     <hr>
-
 
     <h2>header2-0</h2>
 
@@ -278,8 +319,12 @@
     <h2>header2-4</h2>
     <h2>header2-5</h2>
 
+
     <hr>
+
     <h2>header2-6</h2>
+
+
     <div id="header1">
         <h1 class="title">Lorem ipsum</h1>
         <div id="nav">
@@ -289,19 +334,24 @@
     </div>
     <div id="section">
         <h1 class="title">Lorem ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+
+
 
 
     <hr>
 
-    <img src="a.jpg" alt="a.jpg" class="img">
-    <img src="b.png" alt="b.png" class="img">
-    <img src="c.gif" alt="c.jpg" class="img">
+
+    <img src="a.jpg" class="img">
+    <img src="b.png" class="img">
+    <img src="c.gif" class="img">
+
 
     <hr>
 
     <input type="text"> <input type="password">
+
 
     <hr>
 
@@ -311,7 +361,6 @@
         <li class="font_color_blue">오렌지</li>
         <li class="back_color_green">레몬</li>
     </ul>
-
 
 
     <hr>
@@ -331,6 +380,7 @@
 
 
     <hr>
+
     <h1 id="title" class="font_a back_color_green">'우주인터넷망' 꿈꾸는 일론 머스크, '스타링크'에 300억달러 투입</h1>
     <p class="font_a font_b">
         일론 머스크 테슬라 최고경영자(CEO)의 말은 현실이 될 수 있을까. 그는 스페이스X의 위성 인터넷망 '스타링크'의 서비스 지역을 전 세계로 확대해 수십만명의 이용자를 확보하겠다는 목표를 제시했다.
