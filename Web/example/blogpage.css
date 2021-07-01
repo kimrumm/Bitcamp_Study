@@ -19,6 +19,10 @@ a:visited {
   color: #000;
 }
 
+.div_algin_center {
+  margin: 0 auto;
+}
+
 #wrap {
   width: 800px;
   height: auto;
