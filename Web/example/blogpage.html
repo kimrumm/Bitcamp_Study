@@ -10,28 +10,35 @@
 </head>
 
 <body>
-    <!-- 전체 영역 -->
-    <header class="div_algin_center">
-        <h1>안녕하세요 저는 인터넷입니다.</h1>
-        <p>인터넷친구들</p>
-    </header>
-    
-    <nav class="div_algin_center">
-        <ul>
-            <li><a href="#">HTML5</a></li>
-            <li><a href="#">CSS3</a></li>
-            <li><a href="#">JavaScript</a></li>
-        </ul>
-        <form accept="#" method="get">
-            <input type="text" value="내용을 입력하세요">
-            <input type="submit" value="검색">
-        </form>
-        
-    </nav>
+    <!-- 전체 영역 div -->
     <div id="wrap" class="div_algin_center">
-        <!-- section 영역 -->
-            <section class="div_algin_center ">
-                <!-- article 영역 -->
+
+        <!-- Header 영역     -->
+        <header class="div_algin_center">
+            <h1>안녕하세요 저는 인터넷입니다.</h1>
+            <p>인터넷친구들</p>
+        </header>
+        <!-- Heder 끝 -->
+
+        <!-- nav 시작 -->
+        <nav class="div_algin_center">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+
+            <form accept="#" method="get">
+                <input type="text" value="내용을 입력하세요">
+                <input type="submit" value="검색">
+            </form>
+        </nav>
+        <!-- nav 끝 -->
+
+        <!-- section 영역 전체 div -->
+        <div id="section_wrap" class="div_algin_center">
+            <!-- section 영역 -->
+            <section class="text_left">
                 <article>
                     <h2>자기소개</h2>
                     <p>2021년 07월 01일</p>
@@ -53,18 +60,23 @@
                     </p>
                 </article>
             </section>
+            <!-- section 끝 -->
 
             <!-- aside 영역 -->
             <aside class="div_algin_center">
-                <ul class="category">
-                    <h4>카테고리</h4>
-                    <li><a 데이터 href="#"> 데이터</a></li>
-                    <li><a 데이터 href="#"> 데이터</a></li>
-                    <li><a 데이터 href="#"> 데이터</a></li>
-                    <li><a 데이터 href="#"> 데이터</a></li>
-                    <li><a 데이터 href="#"> 데이터</a></li>
-                </ul>
-
+                <!-- 첫번째 -->
+                <div>
+                    <ul class="category">
+                        <h4>카테고리</h4>
+                        <li><a 데이터 href="#"> 데이터</a></li>
+                        <li><a 데이터 href="#"> 데이터</a></li>
+                        <li><a 데이터 href="#"> 데이터</a></li>
+                        <li><a 데이터 href="#"> 데이터</a></li>
+                        <li><a 데이터 href="#"> 데이터</a></li>
+                    </ul>
+                </div>
+                <!-- 두번째 -->
+                <div>
                 <ul class="category2">
                     <h4>최근 글</h4>
                     <li><a 데이터 href="#"> 데이터</a></li>
@@ -72,12 +84,17 @@
                     <li><a 데이터 href="#"> 데이터</a></li>
                     <li><a 데이터 href="#"> 데이터</a></li>
                 </ul>
-            </aside>
             </div>
-            <!-- footer 영역 -->
-            <footer class="div_algin_center">
-                Created By miso1004
-            </footer>
+            </aside>
+            <!-- aside 끝 -->
+        </div>
+        <!-- section div 끝 -->
+
+        <!-- footer 영역 -->
+        <footer class="div_algin_center">
+            Created By kimrumm
+        </footer>
+    </div>
 </body>
 
 </html>

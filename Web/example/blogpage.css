@@ -3,40 +3,36 @@
 /* 전체스타일 */
 * {
   font-family: "Noto Sans KR", sans-serif;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
 body {
   padding-top: 25px;
+  padding-bottom: 25px;
   background-color: white;
 }
 
-a {
-  text-decoration: none;
-}
-a:visited {
-  color: #000;
+#wrap {
+  width: 789px;
+  height: auto;
+  border: 20px solid #ddd;
+  border-radius: 5px;
+  padding: 40px;
+  margin: 10px auto;
 }
 
+/* 클릭 객체 속성 */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 정렬 */
 .div_algin_center {
   margin: 0 auto;
 }
 
-.border {
-  border: 1px solid #aaa;
-}
-.text_center {
-  text-align: center;
-}
-
-#wrap {
-  width: 800px;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-}
 /* header 영역 */
 
 header {
@@ -45,15 +41,13 @@ header {
 }
 
 /* nav 영역 */
-
 nav {
   width: 798px;
-  height: 30px;
-  line-height: 30px;
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   padding-top: 10px;
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 nav > ul {
@@ -62,8 +56,8 @@ nav > ul {
 
 nav li {
   float: left;
-
   list-style: none;
+  display: inline;
   width: 60px;
   text-align: center;
 }
@@ -89,13 +83,16 @@ input[type="submit"] {
 }
 
 /* section 영역 */
-.section_warp {
+#section_wrap {
   width: 800px;
+  overflow: hidden;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
 
 section {
   width: 598px;
-  height: 400px;
   float: left;
   margin-top: 20px;
 }
@@ -117,6 +114,7 @@ article > p {
 article > img {
   margin: 10px 10px;
   width: 500px;
+  padding-top: 10px;
 }
 
 /* aside 영역 */
@@ -151,8 +149,10 @@ aside {
 footer {
   width: 798px;
   height: 100px;
-  padding-left: 20px;
+  padding-left: 40px;
   line-height: 50px;
-  font-size: 18px;
+  font-size: 15px;
   color: blue;
+}
+footer > a {
 }
