@@ -23,12 +23,20 @@ a:visited {
   margin: 0 auto;
 }
 
+.border {
+  border: 1px solid #aaa;
+}
+.text_center {
+  text-align: center;
+}
+
 #wrap {
   width: 800px;
   height: auto;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
+  /* overflow: hidden; */
 }
 /* header 영역 */
 
@@ -116,7 +124,6 @@ article > img {
 /* aside 영역 */
 aside {
   width: 198px;
-  height: 200px;
   float: left;
   margin-top: 20px;
 }
