@@ -14,10 +14,6 @@
             padding: 0;
         }
 
-        h1::selection, p::selection {
-            background-color: ;
-        }
-
         hr {
             margin: 50px 0;
         }
@@ -157,7 +153,7 @@
 
         /* 기준 요소 뒤로 존재하는 요소를 선택 : ~ */
         #title1~h2 {
-            background-color: pink;
+            background-color: black;
         }
 
         /* 선택영역에 마우스 커서가 위치하는경우 -> :hover */
@@ -230,11 +226,11 @@
         }
 
         ol>li:nth-child(2n) {
-            background-color: deeppink;
+            background-color: chartreuse;
         }
 
         ol>li:nth-child(2n+1) {
-            background-color: coral;
+            background-color: cyan;
         }
 
         ol>li:first-child {
@@ -246,23 +242,10 @@
         }
 
         ol>li:hover {
-            background-color: salmon;
+            background-color: darkcyan;
             color: white;
             font-weight: bold;
         }
-
-        a {
-            text-decoration: none;
-            color: magenta;
-        }
-        a:visited {
-            color: blueviolet;
-        }
-
-        a:hover{
-            text-decoration: underline;
-        }
-
     </style>
 </head>
 
@@ -270,9 +253,9 @@
 
     <ol>
         <li><a href="http://www.naver.com">naver</a></li>
-        <li>일</li>
-        <li>이</li>
-        <li>사</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
         <li>five</li>
         <li>six</li>
         <li>seven</li>
