@@ -36,7 +36,6 @@ a:visited {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  /* overflow: hidden; */
 }
 /* header 영역 */
 
@@ -55,7 +54,6 @@ nav {
   border-bottom: 1px solid #aaa;
   padding-top: 10px;
   padding-bottom: 10px;
-  overflow: hidden;
 }
 
 nav > ul {
