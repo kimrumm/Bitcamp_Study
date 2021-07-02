@@ -29,13 +29,15 @@ body {
 
 #main_wrap {
     width : 776; /* -10 -10 -1 -1 -2 */
+
     background-color: #fff;
+
     border: 1px solid #aaa;
     border-radius: 10px;
 
     /* 상하좌우 */
-    margin: 10px auto;
-    box-shadow: 2px 2px 2px #ddd;
+    margin: 10px 10px;
+    box-shadow: 2px 2px 3px #ddd;
 
     padding: 10px;
 }
@@ -48,6 +50,7 @@ header {
 /* 자손태그 */
 header > h1 {
     font-size: 2.0em;
+    font-weight: 400;
 
     /* 폰트두깨조절 */
     font-weight: 200px;
@@ -61,7 +64,6 @@ nav {
     /* 위아래 선 표현 */
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
-
 
     /* 아래있는게 못올라오도록 처리 */
     overflow: hidden;
@@ -80,13 +82,23 @@ nav>ul>li {
     /* 수평방향으로 */
     float: left;
     
-    /* 글자간격 상하좌우 */
-    padding: 0 20px;
+    /* 글자간격 상하좌우
+    padding: 0 20px; */
 
     /* 글자 가운데 정렬 */
     height: 35px;
     line-height: 35px;
 
+}
+
+nav>ul>li>a {
+    display: block;
+    /* background-color: aquamarine; */
+    /* 글자간격 상하좌우*/
+    padding: 0 20px; 
+}
+nav>ul>li>a:hover {
+    background-color: yellow;
 }
 
 nav > div{
@@ -96,9 +108,9 @@ nav > div{
 nav>div>input[type=text]{
     /* 폭조절 */
     width: 100px;
-    height: 22px;
+    height: 24px;
     /* 가운데정렬 */
-    margin-top: 6px;
+    margin-top: 4px;
     /* 타원설정 - 1,4 */
     border-radius: 11px 0 0 11px;
     /* 커서 간격 설정 */
@@ -108,9 +120,9 @@ nav>div>input[type=text]{
 }
 
 nav>div>input[type=submit]{
-    height: 24px;
+    height: 26px;
     /* 가운데정렬 */
-    margin-top: 6px;
+    margin-top: 4px;
     /* 붙히기 */
     margin-left: -9px;
     /* 옆간격 떨어뜨리기 */
@@ -123,9 +135,18 @@ nav>div>input[type=submit]{
     border: 1px solid #aaa;
 }
 
+/* footer 영역 */
+footer{
+    height: 30px;
+    /* 가운데정렬 */
+    text-align: center;
+    line-height: 30px;
+}
+
 /* 컨텐츠 영역 */
 #content_wrap {
     overflow: hidden;
+
     margin-top: 20px;
 }
 section {
@@ -133,13 +154,25 @@ section {
     width: 550px;
     padding: 5px;
 }
-#content_wrap>section>article>h1 {
 
-}
 aside{
     float: right;
     width: 170;
 }
+
+aside>h3 {
+    font-size: 120%;
+    margin-top: 20px;
+}
+
+aside>ul {
+    list-style: none;
+}
+aside>ul>li {
+    padding-left: 10px;
+    line-height: 150%;
+}
+
 /* 공통으로 사용할 클래스 */
 .font_doh{
     font-family: 'Do Hyeon', sans-serif;
@@ -177,4 +210,13 @@ aside{
     font-family: 'Nanum Gothic', sans-serif;
     margin-bottom: 15px;
     
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: pink;
+    /* text-decoration: unline; */
 }
