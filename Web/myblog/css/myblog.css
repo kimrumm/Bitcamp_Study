@@ -1,4 +1,4 @@
-@charset "utf-8"
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic:wght@800&family=Sunflower:wght@500&display=swap');
 
 /* 도현, 나눔고딕, 선플라워
@@ -50,11 +50,131 @@ header > h1 {
     font-size: 2.0em;
 
     /* 폰트두깨조절 */
-    font-weight: 100;
+    font-weight: 200px;
 }
 
+/* navigation 영역 */
+nav {
+    /* 높이 */
+    height: 35px;
 
+    /* 위아래 선 표현 */
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+
+
+    /* 아래있는게 못올라오도록 처리 */
+    overflow: hidden;
+}
+
+nav > ul {
+    float: left;
+
+    /* 안에서만 한정지어줌 */
+    overflow: hidden;
+
+    list-style: none;
+    
+}
+nav>ul>li {
+    /* 수평방향으로 */
+    float: left;
+    
+    /* 글자간격 상하좌우 */
+    padding: 0 20px;
+
+    /* 글자 가운데 정렬 */
+    height: 35px;
+    line-height: 35px;
+
+}
+
+nav > div{
+    float: right;
+}
+
+nav>div>input[type=text]{
+    /* 폭조절 */
+    width: 100px;
+    height: 22px;
+    /* 가운데정렬 */
+    margin-top: 6px;
+    /* 타원설정 - 1,4 */
+    border-radius: 11px 0 0 11px;
+    /* 커서 간격 설정 */
+    padding: 0 10px;
+    /* 밖에 라인 설정 */
+    border: 1px solid #aaa;
+}
+
+nav>div>input[type=submit]{
+    height: 24px;
+    /* 가운데정렬 */
+    margin-top: 6px;
+    /* 붙히기 */
+    margin-left: -9px;
+    /* 옆간격 떨어뜨리기 */
+    margin-right: 5px;
+    /* 타원설정 - 2,3 */
+    border-radius: 0 13px 13px 0;
+    /* 글자 간격 설정 */
+    padding: 0 15px ;
+    /* 밖에 라인 설정 */
+    border: 1px solid #aaa;
+}
+
+/* 컨텐츠 영역 */
+#content_wrap {
+    overflow: hidden;
+    margin-top: 20px;
+}
+section {
+    float: left;
+    width: 550px;
+    padding: 5px;
+}
+#content_wrap>section>article>h1 {
+
+}
+aside{
+    float: right;
+    width: 170;
+}
 /* 공통으로 사용할 클래스 */
-.font_sun{
+.font_doh{
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.border_bottom_a{
+    border-bottom: 1px solid #aaa;
+}
+
+.margin_bottom_20 {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px 0;
     font-family: 'Sunflower', sans-serif;
+}
+
+.date {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.post_img {
+    margin: 10px 5px;
+    border: 0;
+    width: 500px;
+}
+
+.postcontent {
+    /* 가독성 */
+    line-height: 180%;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-bottom: 15px;
+    
 }
