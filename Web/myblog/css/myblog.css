@@ -1,0 +1,60 @@
+@charset "utf-8"
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic:wght@800&family=Sunflower:wght@500&display=swap');
+
+/* 도현, 나눔고딕, 선플라워
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Sunflower', sans-serif; */
+
+/* 브라우저와 상관없이 틀리게 보이는걸 방지 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본사이즈 잡고 나중에 원하는 사이즈로 수정 */
+html, body, div, h1, h2, h3, h4, h5, h6,
+table, input,
+header, nav, aside, section, article,
+p {
+    font-size: 16px;
+    font-family: '돋움체',Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: cornsilk;
+}
+
+/* 전체요소를 감싸는 블록 */
+
+#main_wrap {
+    width : 776; /* -10 -10 -1 -1 -2 */
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+
+    /* 상하좌우 */
+    margin: 10px auto;
+    box-shadow: 2px 2px 2px #ddd;
+
+    padding: 10px;
+}
+
+/* header영역 */
+header {
+    padding: 20px;
+}
+
+/* 자손태그 */
+header > h1 {
+    font-size: 2.0em;
+
+    /* 폰트두깨조절 */
+    font-weight: 100;
+}
+
+
+/* 공통으로 사용할 클래스 */
+.font_sun{
+    font-family: 'Sunflower', sans-serif;
+}
