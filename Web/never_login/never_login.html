@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 로그인</title>
+    <link rel="stylesheet" href="never_login.css">
+</head>
+
+<body>
+    <!-- 전체감싸는 div 시작 -->
+    <div id="main_wrap">
+
+        <!-- Header 시작 -->
+        <header>
+            <h1>
+                <a hfef="https://www.naver.com"></a>
+                <span class="blind">NAVER</span>
+            </h1>
+        </header>
+        <!-- Header 끝 -->
+
+        <!-- section div 시작 -->
+        <div class="lang">
+            <!-- select 시작 -->
+            <select id="locale_switch" name="locale_switch" title="언어선택" class="sel">
+                <option value="ko_KR">한국어</option>
+                <option value="en_US">English</option>
+                <option value="zh-Hans_CN">中文(简体)</option>
+                <option value="zh-Hant_TW">中文(台灣)</option>
+
+            </select>
+            <!-- select 끝 -->
+        </div>
+        <!-- section div 끝  -->
+
+        <!-- container div 시작 -->
+        <div id="container">
+            <!-- content 시작 -->
+            <div>
+                <p></p>
+            </div>
+            <form id="IDLogin" name="IDLogin" target="_top" autocomplete="off" action="#" method="POST">
+                <fieldset>
+                    <legend class="blind">로그인</legend>
+                    <div class="input_row"id="id_area">
+                        <span class="input_box">
+                            <input class="lbl" type="text" id="id" name="id" placeholder="아이디" maxlength="41" value>
+
+                            <input type="text" id="id" name="id" accesskey="L" placeholder="아이디" class="int" maxlength="41" value="">
+                        </span>
+                    </div>
+
+                    <div id="pw_area">
+                        <span>
+                            <label for="pw" id="label_pw_area" class="lbl" style="display: block;">비밀번호</label>
+
+                            <input type="password" id="pw" name="pw" placeholder="비밀번호" class="int" maxlength="16">
+
+                    </div>
+                    <input class="btn.global" type="submit" title="로그인" alt="로그인" value="로그인">
+                    <div class="check_info">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <!-- content 끝 -->
+        </div>
+        <!-- container div 끝 -->
+
+
+
+    </div>
+    <!-- 전체 div 끝 -->
+
+</body>
+
+</html>

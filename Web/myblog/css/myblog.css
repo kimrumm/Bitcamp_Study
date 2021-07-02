@@ -14,21 +14,21 @@ font-family: 'Sunflower', sans-serif; */
 
 /* 기본사이즈 잡고 나중에 원하는 사이즈로 수정 */
 html, body, div, h1, h2, h3, h4, h5, h6,
-table, input,
+table, input, 
 header, nav, aside, section, article,
 p {
     font-size: 16px;
-    font-family: '돋움체',Arial, Helvetica, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 body {
-    background-color: cornsilk;
+    background-color: cornflowerblue;
 }
 
 /* 전체요소를 감싸는 블록 */
 
 #main_wrap {
-    width : 776; /* -10 -10 -1 -1 -2 */
+    width : 776px; /* -10 -10 -1 -1 -2 */
 
     background-color: #fff;
 
@@ -36,8 +36,8 @@ body {
     border-radius: 10px;
 
     /* 상하좌우 */
-    margin: 10px 10px;
-    box-shadow: 2px 2px 3px #ddd;
+    margin: 10px auto;
+    /* box-shadow: 2px 2px 3px #ddd; */
 
     padding: 10px;
 }
@@ -69,7 +69,7 @@ nav {
     overflow: hidden;
 }
 
-nav > ul {
+nav>ul {
     float: left;
 
     /* 안에서만 한정지어줌 */
@@ -101,7 +101,7 @@ nav>ul>li>a:hover {
     background-color: yellow;
 }
 
-nav > div{
+nav>div{
     float: right;
 }
 
@@ -135,13 +135,7 @@ nav>div>input[type=submit]{
     border: 1px solid #aaa;
 }
 
-/* footer 영역 */
-footer{
-    height: 30px;
-    /* 가운데정렬 */
-    text-align: center;
-    line-height: 30px;
-}
+
 
 /* 컨텐츠 영역 */
 #content_wrap {
@@ -170,7 +164,15 @@ aside>ul {
 }
 aside>ul>li {
     padding-left: 10px;
-    line-height: 150%;
+    line-height: 180%;
+}
+
+/* footer 영역 */
+footer{
+    height: 30px;
+    /* 가운데정렬 */
+    text-align: center;
+    line-height: 30px;
 }
 
 /* 공통으로 사용할 클래스 */
@@ -186,6 +188,15 @@ aside>ul>li {
     margin-bottom: 20px;
 }
 
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: pink;
+    /* text-decoration: unline; */
+}
+
 .title {
     font-size: 1.5em;
     font-weight: bold;
@@ -199,9 +210,9 @@ aside>ul>li {
 }
 
 .post_img {
+    width: 500px;
     margin: 10px 5px;
     border: 0;
-    width: 500px;
 }
 
 .postcontent {
@@ -212,11 +223,3 @@ aside>ul>li {
     
 }
 
-a{
-    color: #333;
-    text-decoration: none;
-}
-a:hover {
-    color: pink;
-    /* text-decoration: unline; */
-}
