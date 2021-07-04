@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,72 +10,45 @@
 </head>
 
 <body>
-    <!-- 전체감싸는 div 시작 -->
-    <div id="main_wrap">
-
-        <!-- Header 시작 -->
+    <!-- 전체영역 -->
+    <div class="main">
+        <!-- 웹페이지 상단 -->
         <header>
-            <h1>
-                <a hfef="https://www.naver.com"></a>
-                <span class="blind">NAVER</span>
-            </h1>
-        </header>
-        <!-- Header 끝 -->
-
-        <!-- section div 시작 -->
-        <div class="lang">
-            <!-- select 시작 -->
-            <select id="locale_switch" name="locale_switch" title="언어선택" class="sel">
-                <option value="ko_KR">한국어</option>
-                <option value="en_US">English</option>
-                <option value="zh-Hans_CN">中文(简体)</option>
-                <option value="zh-Hant_TW">中文(台灣)</option>
-
-            </select>
-            <!-- select 끝 -->
-        </div>
-        <!-- section div 끝  -->
-
-        <!-- container div 시작 -->
-        <div id="container">
-            <!-- content 시작 -->
+            <!-- 언어선택 -->
             <div>
-                <p></p>
+                <div class="select-lang">
+                    <select class="selectbox" name="local_switch" title="언어선택">
+                        <option value="ko_KR">한국어</option>
+                        <option value="en_US">English</option>
+
+                    </select>
+                </div>
             </div>
-            <form id="IDLogin" name="IDLogin" target="_top" autocomplete="off" action="#" method="POST">
-                <fieldset>
-                    <legend class="blind">로그인</legend>
-                    <div class="input_row"id="id_area">
-                        <span class="input_box">
-                            <input class="lbl" type="text" id="id" name="id" placeholder="아이디" maxlength="41" value>
 
-                            <input type="text" id="id" name="id" accesskey="L" placeholder="아이디" class="int" maxlength="41" value="">
-                        </span>
-                    </div>
+            <!-- 네이버 로고 -->
+            <div>
+                <a href="#"><img src="never_logo.png"></a>
+            </div>
+        </header>
+        <div class="content">
+            <!-- 로그인 영역 -->
+            <section>
 
-                    <div id="pw_area">
-                        <span>
-                            <label for="pw" id="label_pw_area" class="lbl" style="display: block;">비밀번호</label>
+                <!-- 아이디영역 -->
+                <div class="id">
+                    <input placeholder="아이디" type="text"></input>
+                </div>
 
-                            <input type="password" id="pw" name="pw" placeholder="비밀번호" class="int" maxlength="16">
+                <!-- 비밀번호영역 -->
+                <div class="pw">
+                    <input placeholder="비밀번호" type="password"></input>
+                </div>
 
-                    </div>
-                    <input class="btn.global" type="submit" title="로그인" alt="로그인" value="로그인">
-                    <div class="check_info">
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-
-            <!-- content 끝 -->
-        </div>
-        <!-- container div 끝 -->
-
-
+                <!-- 로그인영역 -->
+                <div class="login-btn">
+                    <button>로그인</button>
+                </div>
+        </section>
+    </div>
 
     </div>
-    <!-- 전체 div 끝 -->
-
-</body>
-
-</html>
