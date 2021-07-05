@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <!-- Javascript는 HTML 문서 안에서 실행 합니다 -->
+    <!-- 자바스크립트는 head 태그 사이에 위치, body 태그 안에도 위치가 가능  -->
+    <!-- HTML의 문서는 1라인부터 아래도 실행된다 ! -> 필요에 따라 자바스크립트의 위ㅣ를 변경해주어야 한다. -->
+</head>
+<script>
+    window.onload = function(){
+
+        var list = '';
+        list = list + '<ul>';
+        list = list = '<li>javascript</li>';
+        list = list = '<li>jQuery</li>';
+        list = list = '</ul>';
+
+        console.log(list);
+
+        document.body
+
+    }
+
+
+</script>
+
+<body>
+</body>
+    <script>
+        // alert('body 태그 밖에 "스크립트"를 작성했습니다.')
+        // alert("<a href=\"https://www.naver.com'>naver</a>")
+    </script>
+
+</html>
+<!-- <script>
+    // Javascript에서의 숫자는 정수와 실수를 구분하지 않고 하나의 타입으로 관리한다.
+    const num = 10;
+    alert(num);
+    num=10.2;
+    alert(num);
+    alert(5+3)*2;
+    alert((5+3)*2;)
+    //; 문장의 종결을 의미하는; 은 생략 가능 하지만 붙이자. 
+</script> -->
+
+<!-- <script>
+    // 비교연선 : > < >= <= == !=
+    // 문자열간의 크기 비교가 가능 -> 유니코드 값으로 비교!
+    alert('가 == 가 : '+('가' =='가'));
+    alert('가 == 하 : '+('가' =='하'));
+    alert('가 > 하 : '+('가' >'하'));
+    alert('가 < 하 : '+('가' <'하'));
+    // true => 1, false => 0
+    alert('true > fale :' + (true>false));
+
+
+</script> -->
+
+<!-- <script>
+    alert(true)
+    alert(false)
+
+    // 논리 부정 연산자 : !
+    alert('!true: ' + !true);
+    alert('!false : ' + !false)
+
+    const num = 10;
+    const chk = num>0 && num <100; // 0보다 크고 100보댜 작은지 체크하는 논리 연산 
+
+    if(num>0) {
+        // 조건식의 결과가 true 일때 실행하는 블록({})
+        alert('num 변수의 값은 0보다 큰 값 입니다.')
+    }
+
+    if(chk){
+        alert('num의 값은 0 보다 크고 100 보다 작은 숫자입니다.')
+    }
+
+</script> -->
+
+<!-- <script>
+    // javascript의 변수 
+    // 변수는 해당 값을 저장하는것이 아니라 값이 저장된 메모리의 주소 값을 저장
+
+    // 변수의 선언 : var 키워드 사용
+    // var 식별자;
+
+    let pi; // 변수 pi 생성 -> undefinede 값이 초기화
+    alert(pi);
+    pi = 3.141592; // 숫자 타입의 값을 저장 -> 정수와 실수를 구분하지 않는다. 
+    alert(pi);
+
+    let PI = 3.14;
+    alert(PI)
+
+</script> -->
+
+<!-- <script>
+    var str = 'String!!!'
+    var num = 100;
+    var check = false;
+    var printStr = function() {alert('함수를 저장하는 변수로 호출')}
+    var objectVar = {name :'SON', age:30, hello:function(){}}; // 객체를 정의하는 간단한 방법
+    new Date();
+
+    // alert(str);
+    // alert(num);
+    // alert(check);
+    // alert(printStr);
+    // alert(objectVar);
+
+    // 함수호출
+    printStr();
+
+    // 객체참조
+    alert(objectVar.name);
+    alert(objectVar.age);
+    objectVar.hello();
+
+    // 내장 함수 객체 생성 
+    var now = new Date();
+    alert(now)
+
+    // 객체 정의 : 속성 (객체가 가지는 변수), 메소드 (객체가 가지는 기능(함수))
+    var person = {
+        name:'SON',
+        age:30,
+        hello:function() {
+            alert('메소드 호출');
+        }
+    }
+</script> -->
+
