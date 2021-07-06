@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+    <!-- <script>
+        /* 
+        함수 : 필요한 데이터를 받아 데이터를 처리하고, 결과를 반환 하는 기능을 정한 코드의 집합 
+        function 키워드를 이용해서 정의
+        1. 익명함수 : 이름을 정의하지 않은 함수 -> 식별자를 통해서 정의 할 때 사용
+        2.  명시적 선언함수
+        */
+
+
+        //변수의 호이스팅 특징으로 변수는 미리 만들어진다.
+        // console.log();
+
+
+        // 익명함수를 사용하는 예
+        // const fn1 = function() {
+        //     alert('익명함수 호출')
+        // }
+        // 함수의 호출
+        // fn1();
+
+        //함수의 호이스팅으로 함수는 미리 만들어져 저장되어 있고 함수의 선언보다 앞에서 호출이 가능하다. 
+        // fn2();
+        // // 함수의 명시적 정의
+        // function fn2(){
+        //     alert('명시적 정의함수 호출')
+        // }
+
+        // function fn2 () {
+        //     alert('재정의된 명시적 함수 호출!!!')
+        // }
+        
+        // 함수의 호출
+        // fn2();
+
+    </script> -->
+
+    <!-- <script>
+        // 매개변수, 반환값이 있는 함수 정의
+        // 매개변수 선언시에는 const 생략
+        function add(num1, num2){
+            return num1+num2
+        }
+        alert(add(10,20))
+
+        const hello = function(name){
+            alert(name+'님 반갑습니다.');
+        }
+        hello('king',10, 20);
+
+    </script> -->
+
+    <!-- <script>
+
+        function sumAll () {
+            let sum = 0;
+
+            for(var i=0; i<arguments.length; i++){
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        console.log('1~10까지의 합 : ' , sumAll(1,2,3,4,5,6,7,8,9,10));
+
+    </script> -->
+    <!-- <script>
+    // 함수에서 사용되는 return
+    // 1. 함수의 종료
+    // 2. 값을 반환
+
+    function retrunFunc (){
+        alert('AAA')
+        return;
+        alert('BBB');
+
+    }
+    const value = retrunFunc();
+    console.log(typeof value, value);
+
+</script> -->
+
+    <!-- <script>
+    // 콜백 함수 -> 매개변수로 전달 받은 함수
+    // 매개변수로 전달받은 함수를 10번 실행하는 함수를 정의
+    function callTenTimes(callBackFn){
+        // 데이터 처리 .....
+        for(let i=0; i<10; i++) {
+            callBackFn();
+        }
+
+    }
+    /*  function callBack() {
+        console.log('callBack Funtion call');
+    } */
+    
+    const callBack = function(){
+        console.log('callBack Funtion call');
+    }
+    callTenTimes(callBack);
+
+</script>
+    -->
+
+    <!--     <script>
+    // 1초마다 시간을 출력
+        const id = setInterval(function(){
+            //const html = '<h3>+new Date()+</h3>'
+            document.body.innerHTML='<h3>'+new Date()+'</h3>';
+        }, 1000);
+
+        // 10초 후에 인터벌 함수를 종료
+        setTimeout(function(){
+            clearInterval(id)
+        },10000);
+    </script>
+-->
+
+    <!-- <script>
+        // javascript 문자열을 생성
+        let jsStr = '';
+        jsStr += 'var num11 = 10;';
+        jsStr += 'alert(num11);';
+
+        // 문자열을 javascript 코드로 실행 
+        eval(jsStr);
+    </script> -->
+
+    <script>
+        const won = '1000원';
+        const dollar = '1.5$';
+
+        console.log(Number(won));
+        console.log(Number(dollar));
+
+        //표현 할 수 있는 범위까지 표현됨
+        console.log(parseInt(won));
+        console.log(parseInt(dollar));
+        console.log(parseFloat(dollar));
+
+        console.log(parseInt('0x273')); // 16진수 표현
+        console.log(parseInt('0273')); 
+        console.log(parseInt('273',8)); // 8진수 표현 
+        console.log(parseInt('273', 16)); 
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
