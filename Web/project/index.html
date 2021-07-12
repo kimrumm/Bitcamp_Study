@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="default.css">
+    <script src="manager.js"></script>
+    <title>회원관리 프로그램</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1 class="title_font">Member Manager</h1>
+    
+    </header>
+    <!-- // header -->
+    <!-- 회원 등록 폼 시작  -->
+    <div id="regFormArea">
+        <h2 class="title_font">회원 정보 등록</h2>
+        <form id="regForm">
+        <table>
+            <tr>
+                <td>
+                    <!-- 특정 폼에 해당 인풋 안쪽으로 포커스를 맞춰준다. -->
+                    <input type="text" id="userID" placeholder="아이디를 입력해주세요.">
+                    <div class="msg"></div>
+                </td>
+                <td>
+                    <label for="pw">비밀번호</label>
+                    <input type="password" id="pw" placeholder="비밀번호를 입력해주세요.">
+                    <div class="msg"></div>
+                </td>
+                <td>
+                    <label for="repw">비밀번호 확인</label>
+                    <input type="password" id="repw" placeholder="비밀번호를 입력해주세요.">
+                    <div class="msg"></div>
+                </td>
+                <td>
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" placeholder="이름을 입력해주세요">
+                    <div class="msg"></div>
+                </td>
+                <td>
+                    <input type="submit" value="등록">
+                    <input type="reset" >
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <!-- 회원등록폼끝 -->
+
+    <div id="listArea">
+
+        <!-- 회원리스트 시작 -->
+        <h2>회원 리스트</h2>
+        <table>
+            <tbody id="list">
+            <tr>
+                <td>순번(index)</td>
+                <td>아이디</td>
+                <td>비밀번호</td>
+                <td>이름</td>
+                <td>관리</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- 회원 리스트 끝 -->
+    <div id="editFormArea">
+        <div id="div_header">
+            <h2 class="title_font">회원 정보 수정</h2>
+            <div> 닫기 </div>
+        </div>
+        <form id="editForm">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" id="editId"> </td>
+            </tr>
+            <tr>
+                <td>비밀번호 </td>
+                <td><input type="password" id="editPw"> </td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인 </td>
+                <td><input type="password" id="editRePw"> </td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" id="editName"></td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                    <input type="submit" value="수정">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    </div>
+
+
+</body>
+</html>
