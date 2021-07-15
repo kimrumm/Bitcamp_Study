@@ -72,4 +72,12 @@ local.properties
 # Spring Boot Tooling
 .sts4-cache/
 
-# End of https://www.toptal.com/developers/gitignore/api/eclipse
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# End of https://www.toptal.com/developers/gitignore/api/java,eclipse
+Servers/Tomcat v8.5 Server at localhost-config/catalina.properties
+Servers/Tomcat v8.5 Server at localhost-config/context.xml
+Servers/Tomcat v8.5 Server at localhost-config/server.xml
+Servers/Tomcat v8.5 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v8.5 Server at localhost-config/web.xml
