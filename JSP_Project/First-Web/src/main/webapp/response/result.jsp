@@ -4,17 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hello JSP</title>
+<title>Insert title here</title>
 <style>
 </style>
 <script>
 </script>
 </head>
 <body>
-	<%--
-	String name = "SON";
-	--%>
-	안녕하세요 <%--=name --%>
-	<% request.getContextPath()%>
+
+ 	<h1>result.jsp 페이지의 응답입니다.</h1>
+
 </body>
-</html> 
+</html>
