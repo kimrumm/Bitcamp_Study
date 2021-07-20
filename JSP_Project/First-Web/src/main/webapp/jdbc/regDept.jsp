@@ -1,3 +1,4 @@
+<%@page import="jdbc.util.ConnectionProvider"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -20,17 +21,13 @@
 	// 데이터베이스 드라이버 로드
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	
-	try {
 	// 연결
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	// select가 아닌 insert 하는 것이라 ResultSet 필요X
+	try {
 	
-	String jdbcUrl = "jdbc:mysql://localhost:3306/project?serberTimezone=UTC";
-	String user = "bit";
-	String pw = "bit";
-	
-	conn = DriverManager.getConnection(jdbcUrl, user, pw);
+	conn = ConnectionProvider.getConnection();
 	
 	// PreparedStatement 
 	String sqlInsert = "insert into dept values(?, ?, ?)";

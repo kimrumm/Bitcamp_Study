@@ -21,7 +21,7 @@ List<Dept> list = (List<Dept>) request.getAttribute("result");
 	}
 	
 	button {
-		margin: 5px 15px;
+		margin: 5px 0;
 }
 
 </style>
@@ -34,7 +34,7 @@ List<Dept> list = (List<Dept>) request.getAttribute("result");
 	<h1>부서 리스트</h1>
 	<hr>
 		
-	<button>부서정보등록</button>
+	<button onclick="location.href='dept_regForm.jsp';">부서정보등록</button>
 
 	<table border=1>
 		<tr>
@@ -52,7 +52,8 @@ List<Dept> list = (List<Dept>) request.getAttribute("result");
 			<td><%= list.get(i).getDeptno() %></td>
 			<td><%= list.get(i).getDname() %></td>
 			<td><%= list.get(i).getLoc() %></td>
-			<td><a href="dept_editForm.jsp?deptno=<%= list.get(i).getDeptno() %>">수정</a>  <a href="#">삭제</a></td>
+			<td><a href="dept_editForm.jsp?deptno=<%= list.get(i).getDeptno() %>">수정</a>  
+			<a href="javascript:delDept(<%= list.get(i).getDeptno() %>)">삭제</a></td>
 		</tr>
 		<% 
 				}
@@ -60,6 +61,15 @@ List<Dept> list = (List<Dept>) request.getAttribute("result");
 		%>
 
 	</table>
+	
+	<script>
+		function delDept(deptno) {
+			if(confirm('정말 삭제하시겠습니까?')) {
+				location.href = 'dept_delete.jsp?deptno='+deptno;
+			}
+			
+		}
+	</script>
 
 	<%-- <%
 	out.println(list);
