@@ -10,3 +10,11 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
+<!-- <servlet>
+	<servlet-name>NowServlet</servlet-name>
+	<servlet-class>test.NowServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>NowServlet</servlet-name>
+	<url-pattern>/now</url-pattern>
+</servlet-mapping> -->

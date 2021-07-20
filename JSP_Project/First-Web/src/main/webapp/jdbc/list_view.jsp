@@ -4,18 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hello JSP</title>
+<title>Insert title here</title>
 <style>
 </style>
 <script>
 </script>
 </head>
 <body>
-	<%--
-	String name = "SON";
-	--%>
-	
-	안녕하세요 <%--= name --%>
-	<%= request.getContextPath() %>
+
 </body>
-</html> 
+</html>
