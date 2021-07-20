@@ -49,10 +49,9 @@
 	
 	 out.println(deptList);
 	
-	
-	
-	
 	// 6. 결과 데이터 request 의 속성에 저장 -> 데이터 공유(전달)
+	request.setAttribute("result", deptList);
 	
 %>
-<%-- <jsp:forward page="list_view.jsp" /> --%> <!-- view 의 역할만!!!! -->
+<jsp:forward page="list_view.jsp" />
+<!-- list_view.js view 의 전달 역할만!!!! --> 

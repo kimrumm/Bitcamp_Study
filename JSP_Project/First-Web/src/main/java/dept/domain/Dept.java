@@ -8,7 +8,6 @@ public class Dept {
 	private String loc;
 	
 	public Dept(int deptno, String dname, String loc) {
-		super();
 		this.deptno = deptno;
 		this.dname = dname;
 		this.loc = loc;
