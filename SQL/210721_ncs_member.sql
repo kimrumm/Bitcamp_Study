@@ -7,3 +7,5 @@ regdate timestamp default current_timestamp,
 constraint member_idx_pk primary key (idx),
 constraint member_memberid_up unique (memberid)
 );
+
+commit;

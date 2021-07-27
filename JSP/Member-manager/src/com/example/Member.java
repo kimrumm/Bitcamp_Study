@@ -1,8 +1,7 @@
-package domain;
+package com.example;
 
 import java.sql.Timestamp;
 import java.util.Date;
-
 
 public class Member {
 	
@@ -13,15 +12,14 @@ public class Member {
 	private Timestamp regdate;
 	
 	public Member() {}
-
-	public Member(int idx, String memberid, String password, String membername, Timestamp regdate) {
-		super();
+	public Member(int idx, String memberid, String password, String username, Timestamp regdate) {
 		this.idx = idx;
 		this.memberid = memberid;
 		this.password = password;
-		this.membername = membername;
+		this.membername = username;
 		this.regdate = regdate;
 	}
+	
 
 	public int getIdx() {
 		return idx;
@@ -67,7 +65,7 @@ public class Member {
 	public Date getDate() {
 		return new Date(getRegdate().getTime());
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Member [idx=" + idx + ", memberid=" + memberid + ", password=" + password + ", username=" + membername
@@ -80,6 +78,9 @@ public class Member {
 	}
 	
 	
+	
+	
+	
+	
+
 }
-
-
