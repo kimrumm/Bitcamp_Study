@@ -7,7 +7,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	//  사용자가 저송한 데이터 , 파일 저장 -> view 파일의 경로 전달 -> 지정된 경로의 임지를 출력
+	//  사용자가 전송한 데이터 , 파일 저장 -> view 파일의 경로 전달 -> 지정된 경로의 이미지를 출력
 	// 사용자 폼 데이터 
 	String title = null;
 	// 서버에 저장된 파일의 이름
@@ -32,14 +32,15 @@
 		
 		while(itr.hasNext()){
 			
-			FileItem item = itr.next();  // text, checkbox, hidden, password, file
-			
+			FileItem item = itr.next();  
+			// formfield (문자열) : text, checkbox, hidden, password, / file (파일이름,size,쓰기)
+			 
 			// file과 file이외의 폼을 구분
 			if(item.isFormField()){
 				// 일반 input type 처리
 				// 파라미터 이름, 해당 폼의 데이터 (문자열)
 				String paramName = item.getFieldName();
-				if(paramName.equals("title")){
+				if(paramName.equals("title")){  
 					String paramValue = item.getString("utf-8");
 					title = paramValue;
 					
@@ -64,7 +65,7 @@
 						
 				String paramName = item.getFieldName();
 				
-				if(paramName.equals("photo")){
+				if(paramName.equals("photo")){ // 이름이 사진과 같을때에만 처리.
 					
 					String userFileName = item.getName();		// 파일의 이름
 					String contentType = item.getContentType();	// contentType 반환

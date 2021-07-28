@@ -1,3 +1,5 @@
+//리스트를 표현하기 위한 데이터 (중요하다)
+
 package guest.domain;
 
 import java.util.List;

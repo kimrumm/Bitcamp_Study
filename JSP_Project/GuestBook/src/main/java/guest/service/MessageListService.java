@@ -1,3 +1,4 @@
+// 결과를 만들어주기위해 DAO로 보낸다
 package guest.service;
 
 import java.sql.Connection;
@@ -56,7 +57,6 @@ public class MessageListService {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

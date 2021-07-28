@@ -49,10 +49,12 @@
 	</form>
 	<hr>
 	
+	<!-- 메세지 리스트가 널이 아니고 비어있지 않다면 -->
 	<c:if test="${listView.messageList ne null and not empty listView.messageList}">
 	
+	<!-- 반복처리 -->
 	<c:forEach items="${listView.messageList}" var="message">
-		<div class="message_box">
+		<div class="message_box"> 
 			<table>
 				<tr>
 					<td>메시지 아이디</td>
@@ -78,11 +80,12 @@
 		</div>
 	</c:forEach>
 	
-	<!-- 페이징 -->
+	<!-- 페이징 / 하단 번호 -->
+	<!-- 0보다커야 1개씩 반복 할 수 있다. -->
 	<c:if test="${listView.pageTotalCount>0}">
 		<div class="paging">
-		<c:forEach begin="1" end="${listView.pageTotalCount}" var="num">
-		<span>[ <a href="list.jsp?page=${num}">${num}</a>  ]</span> 
+		<c:forEach begin="1" end="${listView.pageTotalCount}" var="num"> <!-- 값을 하나씩 출력하기 위해 var=num 사용 --> 
+		<span>[ <a href="list.jsp?page=${num}">${num}</a>  ]</span> <!-- 출력하는 기능 --> 
 		</c:forEach>
 		</div>
 	</c:if>

@@ -17,7 +17,7 @@
 	
 <!-- 	
 	필수 1 : form tag 속성 method="post"
-	필수 2 : form tag 속성 enctype="multipart/form-data"
+	필수 2 : form tag 속성 enctype="multipart/form-data" / multipart 잘 기억하기 !(스프링)
 	필수 3 : input type="file" 있어야 한다 !!!!  
 	-->
 	

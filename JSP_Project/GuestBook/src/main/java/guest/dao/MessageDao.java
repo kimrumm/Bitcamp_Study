@@ -14,6 +14,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.catalina.valves.JDBCAccessLogValve;
+
 import guest.domain.Message;
 import guest.jdbc.JdbcUtil;
 
@@ -120,6 +122,59 @@ public class MessageDao {
 		}
 		
 		return list;
+	}
+
+	// messageId로 게시물 검색 (->sql가서 검사해보기)
+	public Message selectByMid(Connection conn, int mid) throws SQLException {
+		
+		Message message = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from project.guestbook_message where messageId=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, mid);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) { // 볼 수 있는 게시물이 존재하는지 여부 확인
+				message = new Message();
+				message.setMessageId(rs.getInt(1));
+				message.setGuestName(rs.getString(2));
+				message.setPassword(rs.getString(3));
+				message.setMessage(rs.getString(4));
+				message.setRegdate(rs.getTimestamp(5));
+			}
+		} finally {
+			JdbcUtil.close(rs);
+			JdbcUtil.close(pstmt);
+			
+		}
+		
+		return message;
+	}
+
+	public int deleteMessage(Connection conn, int mid) throws SQLException {
+		
+		int resultCnt = 0;
+		PreparedStatement pstmt = null;
+		
+		String sql = "delete from project.guestbook_message where messageid=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1,mid);
+			
+			resultCnt = pstmt.executeUpdate();
+			
+		} finally {
+			JdbcUtil.close(pstmt);
+			
+		}
+		
+		return resultCnt;
 	}
 
 	

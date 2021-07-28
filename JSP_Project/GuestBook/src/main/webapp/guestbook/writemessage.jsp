@@ -18,4 +18,4 @@
 	request.setAttribute("result", result);
 
 %>
-<jsp:forward page="write_view.jsp"/>
+<jsp:forward page="wirte_view.jsp"/>
