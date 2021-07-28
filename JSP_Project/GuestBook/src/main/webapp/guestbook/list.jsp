@@ -2,7 +2,6 @@
 <!-- 
 list 분리 -> list_view
  -->
-<%@page import="guest.domain.MessageListview"%>
 <%@page import="guest.service.MessageListService"%>
 <%@page import="guest.domain.MessageListView"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -15,7 +14,7 @@ list 분리 -> list_view
 		pageNum = Integer.parseInt(pageNumStr);
 	}
 	
-	MessageListview listView = MessageListService.getInstance().getMessageList(pageNum);
+	MessageListView listView = MessageListService.getInstance().getMessageList(pageNum);
 	
 	request.setAttribute("listView", listView);
 	

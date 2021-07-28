@@ -3,7 +3,8 @@
 // DAO로 보내는 빈즈 (아래 포멧에 맞춰서 넣는다.)
 package guest.domain;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
+
 
 public class Message {
 	//DB 테이블 컬럼과 일치 (나중에 MyBatis 쓸 때 필요)
@@ -17,10 +18,9 @@ public class Message {
 	public Message() {
 	}
 
-	public Message(int messageId, String guestName, String password, String message, Timestamp regdate) {
-		super();
-		this.messageId = messageId;
-		this.guestName = guestName;
+	public Message(int messageid, String guestname, String password, String message, Timestamp regdate) {
+		this.messageId = messageid;
+		this.guestName = guestname;
 		this.password = password;
 		this.message = message;
 		this.regdate = regdate;
