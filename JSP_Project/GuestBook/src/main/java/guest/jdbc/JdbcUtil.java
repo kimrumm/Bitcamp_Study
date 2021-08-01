@@ -31,7 +31,7 @@ public class JdbcUtil {
 		
 	}
 	
-	public static void close(ResultSet rs) { // pstmt를 쓰는것과 같다.
+	public static void close(ResultSet rs) { // 
 		if (rs != null) {
 		}
 		try {

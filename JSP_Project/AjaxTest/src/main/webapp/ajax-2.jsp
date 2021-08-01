@@ -3,28 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script scr="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <style>
 </style>
 <script>
 
 	$(document).ready(function(){
+		//alert("ready");
 		
-		$.ajax('data.html',{
-			url : 'data.hrml',
-				success : function(date){
-					$('body').html(date);
-				}
-			}
-		})';
+		$.ajax({
+			url : 'data.html',
+			success : function(data){
+				$('body').html(data);
+			}			
+		});
+		
 	});
+
+
 
 
 </script>
 </head>
 <body>
-ajax-1.jsp
+ ajax-1.jsp
 </body>
 </html>

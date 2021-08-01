@@ -60,7 +60,20 @@
   	<listener-class>jdbc.JdbcListener</listener-class>
   </listener>
   
-  
+ <!-- MVC 서블릿 설정 -->
+ <servlet>
+ 	<servlet-name>FrontController</servlet-name>
+ 	<servlet-class>controller.FrontController</servlet-class>
+ 	  	<init-param>
+  		<param-name>config</param-name>
+  		<param-value>/WEB-INF/command.propertise</param-value>
+  	</init-param>
+ </servlet>
+<!-- URL을 통해 서블릿을 호출할 수 있도록 서블릿과 URL과의 매핑 -->
+<servlet-mapping>
+	<servlet-name>FrontController</servlet-name>
+	<url-pattern>*.do</url-pattern>
+</servlet-mapping> 
   
   
   
