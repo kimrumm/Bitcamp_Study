@@ -15,6 +15,7 @@ public class MemberRegService {
 	
 	public MemberRegService(Dao dao) { //dao로 받는다
 		this.dao = dao;
+		System.out.println("MemberRegService 인스턴스생성");
 	}
 
 	public void regMember(RegReqest reqest) throws Exception {

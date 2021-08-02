@@ -9,6 +9,7 @@ public class ChangePasswordSerivce {
 	
 	public ChangePasswordSerivce(Dao dao) {
 		this.dao = dao;
+		System.out.println("ChangePasswordSerivce 인스턴스 생성");
 	}
 	
 	//비밀번호 바꾸기

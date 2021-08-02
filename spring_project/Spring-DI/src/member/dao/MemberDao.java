@@ -12,6 +12,11 @@ public class MemberDao implements Dao {
 	private static int nextId = 0;
 	private Map<String, Member> map = new HashMap();
 	//			email, Member
+	
+	public MemberDao() {
+		//컨테이너가 인스턴스 생성하는지 확인 
+		System.out.println("Member 인스턴스 ");
+	}
 
 	@Override
 	public Member selectByEmail(String email) {
