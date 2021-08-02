@@ -98,3 +98,20 @@ hs_err_pid*
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
 Servers/
 .DS_Store
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
