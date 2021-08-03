@@ -2,9 +2,8 @@ package member.main;
 
 import java.util.Scanner;
 
-import member.dao.MemberDao;
-import member.domain.RegReqest;
-import member.service.ChangePasswordSerivce;
+import member.domain.RegRequest;
+import member.service.ChangePasswordService;
 import member.service.MemberRegService;
 
 public class MainForMemberManager {
@@ -52,7 +51,7 @@ public class MainForMemberManager {
 		// 비밀번호 변경
 		
 		//ChangePasswordSerivce serivce = new ChangePasswordSerivce(dao);
-		ChangePasswordSerivce serivce = assembler.getPasswordSerivce(); // 어셈블러에게 가져오도록 요청 
+		ChangePasswordService serivce = assembler.getPasswordService(); // 어셈블러에게 가져오도록 요청 
 		
 		try {
 			serivce.changePassword(values[1], values[2], values[3]);
@@ -70,14 +69,14 @@ public class MainForMemberManager {
 		
 		//MemberRegService service = new MemberRegService(dao);
 		MemberRegService service = assembler.getRegService();
-		RegReqest request = new RegReqest();
+		RegRequest request = new RegRequest();
 		request.setEmail(values[1]);
 		request.setName(values[2]);
 		request.setPassword(values[3]);
 		request.setConfirmPassword(values[4]);
 		
 		// 비밀번호가 다를때
-		if(!request.isPasswordEqualsToConfirmPassword()) {
+		if(!request.isPasswordEqualToConfirmPassword()) {
 			System.out.println("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
 			return; // 다시입력 할 수 있게
 		}

@@ -5,8 +5,8 @@ import java.util.Scanner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import member.domain.RegReqest;
-import member.service.ChangePasswordSerivce;
+import member.domain.RegRequest;
+import member.service.ChangePasswordService;
 import member.service.MemberRegService;
 
 public class SpringMain1 {
@@ -15,7 +15,8 @@ public class SpringMain1 {
 	
 	public static void main(String[] args) {
 		
-		ctx = new GenericXmlApplicationContext("classpath:appCtx1.xml");
+		//ctx = new GenericXmlApplicationContext("classpath:appCtx1.xml");
+		ctx = new GenericXmlApplicationContext("classpath:appCtx3.xml");
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -53,7 +54,7 @@ public class SpringMain1 {
 		
 		//ChangePasswordSerivce serivce = new ChangePasswordSerivce(dao);
 		//ChangePasswordSerivce serivce = assembler.getPasswordSerivce(); // 어셈블러에게 가져오도록 요청 
-		ChangePasswordSerivce serivce = ctx.getBean("changePwServie", ChangePasswordSerivce.class);
+		ChangePasswordService serivce = ctx.getBean("changePwServie", ChangePasswordService.class);
 		try {
 			serivce.changePassword(values[1], values[2], values[3]);
 			
@@ -71,14 +72,14 @@ public class SpringMain1 {
 		//MemberRegService service = new MemberRegService(dao);
 		//MemberRegService service = assembler.getRegService();
 		MemberRegService service = ctx.getBean("regService", MemberRegService.class);
-		RegReqest request = new RegReqest();
+		RegRequest request = new RegRequest();
 		request.setEmail(values[1]);
 		request.setName(values[2]);
 		request.setPassword(values[3]);
 		request.setConfirmPassword(values[4]);
 		
 		// 비밀번호가 다를때
-		if(!request.isPasswordEqualsToConfirmPassword()) {
+		if(!request.isPasswordEqualToConfirmPassword()) {
 			System.out.println("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
 			return; // 다시입력 할 수 있게
 		}
