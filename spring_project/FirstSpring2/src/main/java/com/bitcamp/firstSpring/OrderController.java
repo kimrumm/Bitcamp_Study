@@ -12,19 +12,22 @@ public class OrderController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String getOrderForm() {
-		return "order/orderForm"; //  /WEB-INF/views/order/orderForm.jsp 를 찾고 없으면 404 오류 발생
+		return "order/orderForm";  //  /WEB-INF/views/order/orderForm.jsp
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public String order(
 			OrderCommand orderCommand
-			){
-			
-			System.out.println(orderCommand);
-			
+			) {
+		
+		System.out.println(orderCommand);
+		
 		return null;
 	}
 	
 	
-	}
+	
+	
+	
 
+}
