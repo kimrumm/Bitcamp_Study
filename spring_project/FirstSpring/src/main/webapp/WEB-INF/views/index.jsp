@@ -13,9 +13,20 @@
 	<hr>
 	<ul>
 		<li><a href="<c:url value="/hello"/>">/hello</a></li>
-		<li><a href="<c:url value="/member/loginform"/>">/member/login</a></li>
-		<li><a href="<c:url value="/member/regform"/>">/member/regform</a></li>
+		<li><a href="<c:url value="/member/login"/>">/member/login</a></li>
+		<li><a href="<c:url value="/member/memberReg"/>">/member/memberReg</a></li>
+		<li><a href="<c:url value="/order/order"/>">/order/order</a></li>
+		<li><a href="<c:url value="/cookie/make"/>">/cookie/make</a></li>
+		<li><a href="<c:url value="/header/header"/>">/header/header</a></li>
+		<li><a href="<c:url value="/view/view1"/>">/view/view1</a></li>
 	</ul>
 
 </body>
 </html>
+
+
+
+
+
+
+
