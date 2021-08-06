@@ -21,6 +21,14 @@
 		<li><a href="<c:url value="/view/view1"/>">/view/view1</a></li>
 		<li><a href="<c:url value="/search/search"/>">/search/search</a></li>
 		<li><a href="<c:url value="/upload/uploadForm"/>">/upload/uploadForm</a></li>
+
+		<li><a href="<c:url value="/meber/mypage/cool"/>">/meber/mypage/cool</a></li>
+		<li><a href="<c:url value="/meber/mypage/hot"/>">/meber/mypage/hot</a></li>
+		<li><a href="<c:url value="/meber/mypage/king"/>">/meber/mypage/king</a></li>
+		<li><a href="<c:url value="/meber/mypage/scott"/>">/meber/mypage/scott</a></li>
+		
+		
+		
 	</ul>
 
 </body>
