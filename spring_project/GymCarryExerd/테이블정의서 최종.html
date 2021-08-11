@@ -1,0 +1,1941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0213)file:///Users/kimrumm/Documents/GitHub/Bitcamp_Study/spring_project/GymCarryExerd/%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%B4%E1%84%89%E1%85%A5.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>테이블 정의서(HTML)</title>
+<style type="text/css">
+<!--
+.border0{
+	width: 1024px;
+	page-break-before: always;
+	border: solid 0px white;
+}
+.entity{
+	width: 1024px;
+	margin-bottom: 10px;
+	page-break-before: always;
+}
+.entity-header tr td, .entity-header tr th{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.entity-header{
+	border-spacing: 0px;
+	border-top: solid 2px black;
+	border-bottom: solid 2px black;
+	margin:0px;
+}
+.column-list{
+	width: 100%;
+	border-spacing: 0px;
+	margin: 0px;
+	border-bottom: solid 2px black;
+}
+.column-list th{
+	border-bottom: solid 2px black;
+	border-top: solid 2px black;
+	text-align: left;
+}
+.column-list th, .column-list td{
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.under-line{
+	border-bottom: solid 1px gray;
+}
+.right-line{
+	border-right: solid 1px gray;
+}
+.left-line{
+	border-left: solid 1px gray;
+}
+th{
+	background-color: #eee;
+}
+.root {
+	border-spacing: 0px;
+	width: 1024px;
+}
+.under-line {
+	border-bottom: solid 1px gray;
+}
+.right-line {
+	border-right: solid 1px gray;
+}
+.left-line {
+	border-left: solid 1px gray;
+}
+th {
+	background-color: #eee;
+}
+.header {
+	margin-bottom: 0px;
+}
+.footter {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border-bottom:solid 2px black;
+}
+tr.only-first-row td,tr.only-first-row th {
+	border-top: solid 2px black;
+}
+tr.first-row td,tr.first-row th {
+	border-top: solid 2px black;
+	border-bottom: solid 2px black;
+}
+tr.last-row td,tr.last-row th {
+	border-bottom: solid 2px black;
+}
+-->
+</style>
+<script type="text/javascript">
+	var cnt = 1;
+</script>
+</head>
+<body>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tbody><tr>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021/08/11</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">김명호, 김승민, 김아름, 김훈, 신은경, 황지원</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+	<br>
+	<br>
+	<br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>1. 회원 (MEMBER)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">MEMEMAIL</td>
+						<td class="right-line">이메일</td>
+						<td class="right-line">이메일</td>
+						<td class="right-line">VARCHAR(40)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">MEMPW</td>
+						<td class="right-line">비밀번호</td>
+						<td class="right-line">비밀번호</td>
+						<td class="right-line">VARCHAR(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">MEMNAME</td>
+						<td class="right-line">이름</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">MEMNICK</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">MEMPHONE</td>
+						<td class="right-line">핸드폰번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">MEMBIRTH</td>
+						<td class="right-line">생년월일</td>
+						<td class="right-line">생년월일</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">MEMGENDER</td>
+						<td class="right-line">성별</td>
+						<td class="right-line">성별</td>
+						<td class="right-line">VARCHAR(5)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">MEMPHOTO</td>
+						<td class="right-line">회원사진</td>
+						<td class="right-line">이미지</td>
+						<td class="right-line">MEDIUMBLOB</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_MEMBER</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">회원번호</td>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>2. 게시판 (BOARD)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">POSTIDX</td>
+						<td class="right-line">게시글IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">POSTNAME</td>
+						<td class="right-line">제목</td>
+						<td class="right-line">제목</td>
+						<td class="right-line">VARCHAR(255)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">POSTCONTENT</td>
+						<td class="right-line">글내용</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">POSTNICK</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">UPLOADFILE</td>
+						<td class="right-line">첨부파일</td>
+						<td class="right-line">파일업로드</td>
+						<td class="right-line">MEDIUMBLOB</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">POSTDATE</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">date</td>
+						<td class="right-line">TIMESTAMP</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">POSTVIEW</td>
+						<td class="right-line">조회수</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">POSTLIKE</td>
+						<td class="right-line">좋아요갯수</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">BOARDCATEGORY</td>
+						<td class="right-line">말머리</td>
+						<td class="right-line">분류값</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_BOARD</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">게시글IDX</td>
+			<td class="right-line">POSTIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_MEMBER_TO_BOARD</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">MEMBER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">BOARD</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">MEMIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>3. 채팅방내용 (CHATROOM)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">MESSAGEIDX</td>
+						<td class="right-line">메세지 번호</td>
+						<td class="right-line">PK</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CHATIDX</td>
+						<td class="right-line">채팅방번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">CHATCONTENT</td>
+						<td class="right-line">대화내용</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">CHATDATE</td>
+						<td class="right-line">대화시간</td>
+						<td class="right-line">date</td>
+						<td class="right-line">TIMESTAMP</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CRIDX</td>
+						<td class="right-line">캐리번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_CHATROOM</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">메세지 번호</td>
+			<td class="right-line">MESSAGEIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_CARRY_TO_CHATROOM</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">CARRY</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">CHATROOM</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">CRIDX</td>
+			<td class="right-line">CRIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_MEMBER_TO_CHATROOM</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">MEMBER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">CHATROOM</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">MEMIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_CHATLIST_TO_CHATROOM</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">CHATLIST</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">CHATROOM</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">CHATIDX</td>
+			<td class="right-line">CHATIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>4. 회원바디기록 (MEMBERBODYINFO)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">MEMO</td>
+						<td class="right-line">타입</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">MEMDATE</td>
+						<td class="right-line">날짜</td>
+						<td class="right-line">날짜</td>
+						<td class="right-line">TIMESTAMP</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_MEMBERBODYINFO</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_MEMBER_TO_MEMBERBODYINFO</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">MEMBER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">MEMBERBODYINFO</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">MEMIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>5. 게시판댓글 (BOARDCOMMENT)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">COMMENTIDX</td>
+						<td class="right-line">댓글IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">POSTIDX</td>
+						<td class="right-line">게시글IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">COMMENTNICK</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">COMMENTCONTENT</td>
+						<td class="right-line">댓글내용</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">COMMENTDATE</td>
+						<td class="right-line">댓글작성일자</td>
+						<td class="right-line">date</td>
+						<td class="right-line">TIMESTAMP</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_BOARDCOMMENT</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">댓글IDX</td>
+			<td class="right-line">COMMENTIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_BOARD_TO_BOARDCOMMENT</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">BOARD</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">BOARDCOMMENT</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">POSTIDX</td>
+			<td class="right-line">POSTIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>6. 결제 (PAYMENT)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">PAYIDX</td>
+						<td class="right-line">결제번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">PAYPRICE</td>
+						<td class="right-line">결제금액</td>
+						<td class="right-line">가격</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">PAYDATE</td>
+						<td class="right-line">결제날짜</td>
+						<td class="right-line">date</td>
+						<td class="right-line">TIMESTAMP</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EXERNUM</td>
+						<td class="right-line">수업횟수</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">EXERIDX</td>
+						<td class="right-line">수업IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_PAYMENT</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">결제번호</td>
+			<td class="right-line">PAYIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_MEMBER_TO_PAYMENT</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">MEMBER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">PAYMENT</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">MEMIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_EXERCISEINFO_TO_PAYMENT</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">EXERCISEINFO</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">PAYMENT</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">EXERIDX</td>
+			<td class="right-line">EXERIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>7. 캐리정보 (CARRY)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">CRIDX</td>
+						<td class="right-line">캐리IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CRID</td>
+						<td class="right-line">캐리아이디</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">CRPW</td>
+						<td class="right-line">비밀번호</td>
+						<td class="right-line">비밀번호</td>
+						<td class="right-line">VARCHAR(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">CRNAME</td>
+						<td class="right-line">캐리실명</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CRNICK</td>
+						<td class="right-line">캐리닉네임</td>
+						<td class="right-line">닉네임</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">CRPHONE</td>
+						<td class="right-line">핸드폰번호</td>
+						<td class="right-line">전화번호</td>
+						<td class="right-line">VARCHAR(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CRBIRTH</td>
+						<td class="right-line">생년월일</td>
+						<td class="right-line">생년월일</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">CRGENDER</td>
+						<td class="right-line">성별</td>
+						<td class="right-line">성별</td>
+						<td class="right-line">VARCHAR(5)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">CREMAIL</td>
+						<td class="right-line">이메일</td>
+						<td class="right-line">이메일</td>
+						<td class="right-line">VARCHAR(40)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">CRPHOTO</td>
+						<td class="right-line">프로필사진</td>
+						<td class="right-line">이미지</td>
+						<td class="right-line">MEDIUMBLOB</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">CRINTRO</td>
+						<td class="right-line">소갯말</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">CRBFPHOTO</td>
+						<td class="right-line">캐리바디프로필</td>
+						<td class="right-line">이미지</td>
+						<td class="right-line">MEDIUMBLOB</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">CRDEPART</td>
+						<td class="right-line">전문분야</td>
+						<td class="right-line">텍스트</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">CRFIELD</td>
+						<td class="right-line">종목</td>
+						<td class="right-line">텍스트</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">CRCERTI1</td>
+						<td class="right-line">자격및경력1</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">CRCERTI2</td>
+						<td class="right-line">자격및경력2</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">CRCERTI3</td>
+						<td class="right-line">자격및경력3</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">CRCERTI4</td>
+						<td class="right-line">자격및경력4</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">CRCERTI5</td>
+						<td class="right-line">자격및경력5</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">CENTERNAME</td>
+						<td class="right-line">소속센터</td>
+						<td class="right-line">문자</td>
+						<td class="right-line">VARCHAR(255)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">CENTERIDX</td>
+						<td class="right-line">센터IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_CARRY</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">캐리IDX</td>
+			<td class="right-line">CRIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_CENTER_TO_CARRY</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">CENTER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">CARRY</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">CENTERIDX</td>
+			<td class="right-line">CENTERIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>8. 운동센터 (CENTER)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">CENTERIDX</td>
+						<td class="right-line">센터IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CENTERNAME</td>
+						<td class="right-line">센터이름</td>
+						<td class="right-line">이름</td>
+						<td class="right-line">VARCHAR(50)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">OPENHOUR</td>
+						<td class="right-line">운영시간</td>
+						<td class="right-line">텍스트</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">PARKING</td>
+						<td class="right-line">주차시설</td>
+						<td class="right-line">텍스트</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CENTERADDRESS</td>
+						<td class="right-line">센터주소</td>
+						<td class="right-line">텍스트</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">CENTERPHONE</td>
+						<td class="right-line">센터번호</td>
+						<td class="right-line">텍스트</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_CENTER</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">센터IDX</td>
+			<td class="right-line">CENTERIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>9. 캐리상세페이지 리뷰댓글 (CARRYREVIEW)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REVIEWIDX</td>
+						<td class="right-line">리뷰IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">REVIEWCONTENT</td>
+						<td class="right-line">리뷰내용</td>
+						<td class="right-line">메모</td>
+						<td class="right-line">MEDIUMTEXT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">CRIDX</td>
+						<td class="right-line">캐리IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_CARRYREVIEW</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">리뷰IDX</td>
+			<td class="right-line">REVIEWIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_CARRY_TO_CARRYREVIEW</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">CARRY</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">CARRYREVIEW</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">CRIDX</td>
+			<td class="right-line">CRIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_MEMBER_TO_CARRYREVIEW</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">MEMBER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">CARRYREVIEW</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">MEMIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>10. 채팅방리스트 (CHATLIST)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">CHATIDX</td>
+						<td class="right-line">채팅방번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_CHATLIST</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">채팅방번호</td>
+			<td class="right-line">CHATIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>11. 수업정보 (EXERCISEINFO)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">EXERIDX</td>
+						<td class="right-line">수업IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CRIDX</td>
+						<td class="right-line">캐리IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">PTPRICE1</td>
+						<td class="right-line">PT1회가격</td>
+						<td class="right-line">가격</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">PTPRICE5</td>
+						<td class="right-line">PT5회가격</td>
+						<td class="right-line">가격</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">PTPRICE10</td>
+						<td class="right-line">PT10회가격</td>
+						<td class="right-line">가격</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">PTPRICE20</td>
+						<td class="right-line">PT20회가격</td>
+						<td class="right-line">가격</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">FACEORNOT</td>
+						<td class="right-line">비대면&amp;대면</td>
+						<td class="right-line">여부</td>
+						<td class="right-line">BOOLEAN</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_EXERCISEINFO</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">수업IDX</td>
+			<td class="right-line">EXERIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_CARRY_TO_EXERCISEINFO</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">CARRY</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">EXERCISEINFO</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">CRIDX</td>
+			<td class="right-line">CRIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+	<table class="border0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><font size="5"><b><script type="text/javascript">document.write(cnt++);</script>12. 찜한리스트 (LIKELIST)</b></font></td>
+			<td align="right"><font size="3">※  관련 테이블</font></td>
+		</tr>
+	</tbody></table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<table class="column-list">
+					<tbody><tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">LIKEIDX</td>
+						<td class="right-line">좋아요IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">MEMIDX</td>
+						<td class="right-line">회원번호</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">CRIDX</td>
+						<td class="right-line">캐리IDX</td>
+						<td class="right-line">숫자</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">LIKECHECK</td>
+						<td class="right-line">좋아요체크</td>
+						<td class="right-line">여부</td>
+						<td class="right-line">BOOLEAN</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+				<table class="root header">
+					<tbody><tr class="first-row">
+						<th class="right-line">인덱스명</th>
+						<td class="right-line">PK_LIKELIST</td>
+						<th class="right-line">유형</th>
+						<td class="right-line">UNIQUE</td>
+						<th class="right-line">구분</th>
+						<td>PK</td>
+					</tr>
+				</tbody></table>
+				<table class="root footter">
+					<tbody><tr>
+						<th class="right-line under-line">속성명</th>
+						<th class="right-line under-line">컬럼명</th>
+						<th class="right-line under-line">데이터 타입</th>
+						<th class="under-line">정렬</th>
+					</tr>
+		<tr>
+			<td class="right-line">좋아요IDX</td>
+			<td class="right-line">LIKEIDX</td>
+			<td class="right-line">INTEGER</td>
+			<td>ASC</td>
+		</tr>
+				</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_MEMBER_TO_LIKELIST</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">MEMBER</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">LIKELIST</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">MEMIDX</td>
+			<td class="right-line">MEMIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<table class="root header">
+		<tbody><tr class="only-first-row">
+			<th class="right-line under-line">관계명</th>
+			<td class="right-line under-line" "="">FK_CARRY_TO_LIKELIST</td>
+			<th class="right-line under-line" "="">부모 테이블</th>
+			<td class="under-line right-line">CARRY</td>
+			<th class="right-line under-line" "="">자식 테이블</th>
+			<td class="under-line">LIKELIST</td>
+		</tr> 
+		<tr class="last-row">
+			<th class="right-line">식별 유형</th>
+			<td class="right-line">비식별</td>
+			<th class="right-line">부모 차수</th>
+			<td class="right-line">EXACTLY_ONE</td>
+			<th class="right-line">자식 차수</th>
+			<td>ZERO_OR_MORE</td>
+		</tr>
+	</tbody></table>
+	<table class="root footter">
+		<tbody><tr>
+			<th class="right-line under-line">부모 컬럼</th>
+			<th class="right-line under-line">자식 컬럼</th>
+			<th class="under-line">데이터 타입</th>
+		</tr>
+		<tr>
+			<td class="right-line">CRIDX</td>
+			<td class="right-line">CRIDX</td>
+			<td>INTEGER</td>
+		</tr>
+	</tbody></table>
+	<br><br><br><br>
+
+</body></html>

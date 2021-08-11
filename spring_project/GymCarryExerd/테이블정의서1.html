@@ -1,0 +1,852 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>리포트</title>
+    <style type="text/css">
+        .entity{
+            border: solid 1px #7E2828;
+            margin-bottom: 20px;
+        }
+        .header{
+            background-color: #7E2828;
+            color: white;
+        }
+        .column-header{
+            background-color: #E8E8E8;
+        }
+        td{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>내 스키마의 템플릿</h2>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">회원 (MEMBER)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>회원번호(PK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>이메일</td>
+        <td>MEMEMAIL</td>
+        <td>이메일</td>
+        <td>VARCHAR(40)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>비밀번호</td>
+        <td>MEMPW</td>
+        <td>비밀번호</td>
+        <td>VARCHAR(30)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>이름</td>
+        <td>MEMNAME</td>
+        <td>닉네임</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>닉네임</td>
+        <td>MEMNICK</td>
+        <td>닉네임</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>핸드폰번호</td>
+        <td>MEMPHONE</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>생년월일</td>
+        <td>MEMBIRTH</td>
+        <td>생년월일</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>성별</td>
+        <td>MEMGENDER</td>
+        <td>성별</td>
+        <td>VARCHAR(5)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원사진</td>
+        <td>MEMPHOTO</td>
+        <td>이미지</td>
+        <td>MEDIUMBLOB</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">게시판 (BOARD)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>게시글IDX(PK)</td>
+        <td>POSTIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>제목</td>
+        <td>POSTNAME</td>
+        <td>제목</td>
+        <td>VARCHAR(255)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>글내용</td>
+        <td>POSTCONTENT</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>닉네임</td>
+        <td>POSTNICK</td>
+        <td>닉네임</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원번호(FK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>첨부파일</td>
+        <td>UPLOADFILE</td>
+        <td>파일업로드</td>
+        <td>MEDIUMBLOB</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>작성일자</td>
+        <td>POSTDATE</td>
+        <td>date</td>
+        <td>TIMESTAMP</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>조회수</td>
+        <td>POSTVIEW</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>좋아요갯수</td>
+        <td>POSTLIKE</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>말머리</td>
+        <td>BOARDCATEGORY</td>
+        <td>분류값</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">채팅방내용 (CHATROOM)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>메세지 번호(PK)</td>
+        <td>MESSAGEIDX</td>
+        <td>PK</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>채팅방번호(FK)</td>
+        <td>CHATIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>대화내용</td>
+        <td>CHATCONTENT</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>대화시간</td>
+        <td>CHATDATE</td>
+        <td>date</td>
+        <td>TIMESTAMP</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리번호(FK)</td>
+        <td>CRIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원번호(FK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">회원바디기록 (MEMBERBODYINFO)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>타입</td>
+        <td>MEMO</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>날짜</td>
+        <td>MEMDATE</td>
+        <td>날짜</td>
+        <td>TIMESTAMP</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원번호(FK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">게시판댓글 (BOARDCOMMENT)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>댓글IDX(PK)</td>
+        <td>COMMENTIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>게시글IDX(FK)</td>
+        <td>POSTIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>닉네임</td>
+        <td>COMMENTNICK</td>
+        <td>닉네임</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>댓글내용</td>
+        <td>COMMENTCONTENT</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>댓글작성일자</td>
+        <td>COMMENTDATE</td>
+        <td>date</td>
+        <td>TIMESTAMP</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">결제 (PAYMENT)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>결제번호(PK)</td>
+        <td>PAYIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>결제금액</td>
+        <td>PAYPRICE</td>
+        <td>가격</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>결제날짜</td>
+        <td>PAYDATE</td>
+        <td>date</td>
+        <td>TIMESTAMP</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>수업횟수</td>
+        <td>EXERNUM</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원번호(FK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>수업IDX(FK)</td>
+        <td>EXERIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">캐리정보 (CARRY)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>캐리IDX(PK)</td>
+        <td>CRIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리아이디</td>
+        <td>CRID</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>비밀번호</td>
+        <td>CRPW</td>
+        <td>비밀번호</td>
+        <td>VARCHAR(30)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리실명</td>
+        <td>CRNAME</td>
+        <td>닉네임</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리닉네임</td>
+        <td>CRNICK</td>
+        <td>닉네임</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>핸드폰번호</td>
+        <td>CRPHONE</td>
+        <td>전화번호</td>
+        <td>VARCHAR(30)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>생년월일</td>
+        <td>CRBIRTH</td>
+        <td>생년월일</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>성별</td>
+        <td>CRGENDER</td>
+        <td>성별</td>
+        <td>VARCHAR(5)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>이메일</td>
+        <td>CREMAIL</td>
+        <td>이메일</td>
+        <td>VARCHAR(40)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>프로필사진</td>
+        <td>CRPHOTO</td>
+        <td>이미지</td>
+        <td>MEDIUMBLOB</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>소갯말</td>
+        <td>CRINTRO</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리바디프로필</td>
+        <td>CRBFPHOTO</td>
+        <td>이미지</td>
+        <td>MEDIUMBLOB</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>전문분야</td>
+        <td>CRDEPART</td>
+        <td>텍스트</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>종목</td>
+        <td>CRFIELD</td>
+        <td>텍스트</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>자격및경력1</td>
+        <td>CRCERTI1</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>자격및경력2</td>
+        <td>CRCERTI2</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>자격및경력3</td>
+        <td>CRCERTI3</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>자격및경력4</td>
+        <td>CRCERTI4</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>자격및경력5</td>
+        <td>CRCERTI5</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>소속센터</td>
+        <td>CENTERNAME</td>
+        <td>문자</td>
+        <td>VARCHAR(255)</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>센터IDX(FK)</td>
+        <td>CENTERIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">운동센터 (CENTER)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>센터IDX(PK)</td>
+        <td>CENTERIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>센터이름</td>
+        <td>CENTERNAME</td>
+        <td>이름</td>
+        <td>VARCHAR(50)</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>운영시간</td>
+        <td>OPENHOUR</td>
+        <td>텍스트</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>주차시설</td>
+        <td>PARKING</td>
+        <td>텍스트</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>센터주소</td>
+        <td>CENTERADDRESS</td>
+        <td>텍스트</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>센터번호</td>
+        <td>CENTERPHONE</td>
+        <td>텍스트</td>
+        <td>MEDIUMTEXT</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">캐리상세페이지 리뷰댓글 (CARRYREVIEW)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>리뷰IDX(PK)</td>
+        <td>REVIEWIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>리뷰내용</td>
+        <td>REVIEWCONTENT</td>
+        <td>메모</td>
+        <td>MEDIUMTEXT</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리IDX(FK)</td>
+        <td>CRIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원번호(FK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">공지사항 (공지사항)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">채팅방리스트 (CHATLIST)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>채팅방번호(PK)</td>
+        <td>CHATIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">수업정보 (EXERCISEINFO)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>수업IDX(PK)</td>
+        <td>EXERIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리IDX(FK)</td>
+        <td>CRIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PT1회가격</td>
+        <td>PTPRICE1</td>
+        <td>가격</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PT5회가격</td>
+        <td>PTPRICE5</td>
+        <td>가격</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PT10회가격</td>
+        <td>PTPRICE10</td>
+        <td>가격</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PT20회가격</td>
+        <td>PTPRICE20</td>
+        <td>가격</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>비대면&대면</td>
+        <td>FACEORNOT</td>
+        <td>여부</td>
+        <td>BOOLEAN</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table class="entity" cellpadding="0" cellspacing="0">
+    <tr>
+        <td colspan="6" class="header">찜한리스트 (LIKELIST)</td>
+    </tr>
+    <tr class="column-header">
+        <td>논리명</td>
+        <td>물리명</td>
+        <td>도메인</td>
+        <td>데이터 타입</td>
+        <td>Not Null</td>
+        <td>설명</td>
+    </tr>
+    <tr>
+        <td>좋아요IDX(PK)</td>
+        <td>LIKEIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>Y</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>회원번호(FK)</td>
+        <td>MEMIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>캐리IDX(FK)</td>
+        <td>CRIDX</td>
+        <td>숫자</td>
+        <td>INTEGER</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>좋아요체크</td>
+        <td>LIKECHECK</td>
+        <td>여부</td>
+        <td>BOOLEAN</td>
+        <td>N</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+</body>
+</html>
