@@ -108,6 +108,7 @@ Servers/
 .idea/
 *.iml
 *.iws
+.iml
 
 # Mac
 .DS_Store
