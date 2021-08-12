@@ -15,6 +15,7 @@ import com.bitcamp.op.jdbc.ConnectionProvider;
 import com.bitcamp.op.jdbc.JdbcUtil;
 import com.bitcamp.op.member.dao.JdbcTemplateMemberDao;
 import com.bitcamp.op.member.dao.MemberDao;
+import com.bitcamp.op.member.dao.MybatisMemberDao;
 import com.bitcamp.op.member.domain.Member;
 import com.bitcamp.op.member.domain.MemberRegRequest;
 
@@ -26,8 +27,11 @@ public class MemberRegService {
 	// @Autowired
 	// private MemberDao dao;
 
+	//@Autowired
+	//private JdbcTemplateMemberDao dao;
+	
 	@Autowired
-	private JdbcTemplateMemberDao dao;
+	private MybatisMemberDao dao;
 
 	public int memberReg(MemberRegRequest regRequest, HttpServletRequest request) {
 
@@ -70,7 +74,7 @@ public class MemberRegService {
 			// 2. dao 저장
 			// conn = ConnectionProvider.getConnection();
 
-			resultCnt = dao.insertMember1(member);
+			resultCnt = dao.insertMember(member);
 
 			System.out.println("새롭게 등록된 idx => " + member.getIdx());
 
@@ -90,7 +94,6 @@ public class MemberRegService {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
-
 		return resultCnt;
 	}
 
