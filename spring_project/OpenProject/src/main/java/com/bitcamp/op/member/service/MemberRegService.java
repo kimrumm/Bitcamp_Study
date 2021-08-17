@@ -7,15 +7,17 @@ import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.bitcamp.op.jdbc.ConnectionProvider;
 import com.bitcamp.op.jdbc.JdbcUtil;
+import com.bitcamp.op.member.dao.Dao;
 import com.bitcamp.op.member.dao.JdbcTemplateMemberDao;
 import com.bitcamp.op.member.dao.MemberDao;
-import com.bitcamp.op.member.dao.MybatisMemberDao;
+import com.bitcamp.op.member.dao.mybatisMemberDao;
 import com.bitcamp.op.member.domain.Member;
 import com.bitcamp.op.member.domain.MemberRegRequest;
 
@@ -30,8 +32,13 @@ public class MemberRegService {
 	//@Autowired
 	//private JdbcTemplateMemberDao dao;
 	
+	//@Autowired
+	//private mybatisMemberDao dao;
+	
+	private Dao dao;
+	
 	@Autowired
-	private MybatisMemberDao dao;
+	private SqlSessionTemplate template;
 
 	public int memberReg(MemberRegRequest regRequest, HttpServletRequest request) {
 
@@ -59,7 +66,7 @@ public class MemberRegService {
 				// 파일 저장시에 파일 이름이 같으면 덮어쓴다 -> 회원별 고유한 파일 이름을 만들자!!, 새로운 파일이름에 확장자 추가
 				String newFileName = regRequest.getMemberid() 
 						+ System.currentTimeMillis()
-						+ chkFileType(regRequest.getPhoto());
+						+ "."+chkFileType(regRequest.getPhoto());
 				// cool123128936798123987
 
 				// 새로운 File 객체
@@ -73,6 +80,8 @@ public class MemberRegService {
 
 			// 2. dao 저장
 			// conn = ConnectionProvider.getConnection();
+			
+			dao = template.getMapper(Dao.class);
 
 			resultCnt = dao.insertMember(member);
 
@@ -103,7 +112,7 @@ public class MemberRegService {
 
 		// 업로드 파일의 contentType
 		String contentType = file.getContentType();
-		if (!(contentType.equals("image/jpg") || contentType.equals("image/png") || contentType.equals("image/gif"))) {
+		if (!(contentType.equals("image/jpeg") ||contentType.equals("image/jpg") || contentType.equals("image/png") || contentType.equals("image/gif"))) {
 			throw new Exception("허용하지 않는 파일 타입 : " + contentType);
 		}
 

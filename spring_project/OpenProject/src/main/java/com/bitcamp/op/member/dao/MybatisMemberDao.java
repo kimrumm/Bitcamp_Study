@@ -21,12 +21,12 @@ import com.bitcamp.op.member.domain.Member;
 import com.bitcamp.op.member.domain.SearchIdPw;
 
 @Repository
-public class MybatisMemberDao {
+public class mybatisMemberDao {
 
 	@Autowired
 	private SqlSessionTemplate template;
-
-	private final String NAME_SPACE = "com.bitcamp.op.member.dao.memberMapper";
+	
+	private final String NAME_SPACE = "com.bitcamp.op.member.dao.memberMapper"; 
 
 	public int insertMember(Member member) throws SQLException {
 		return template.update(NAME_SPACE+".insertMember", member);
@@ -35,13 +35,13 @@ public class MybatisMemberDao {
 	public int insertMember1(final Member member) throws SQLException {
 
 		int resultCnt = 0;
-
+		
 		// 자동 증가한 컬럼의 값을 저장할 객체
 //		KeyHolder holder = new GeneratedKeyHolder();
-//
+//		
 //		resultCnt = template.update(
 //				new PreparedStatementCreator() {
-//
+//					
 //					@Override
 //					public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 //						String sql2 = "insert into member (memberid,password,membername, memberphoto) values (?, ?, ?,?)";
@@ -54,10 +54,10 @@ public class MybatisMemberDao {
 //					}
 //				}
 //				, holder);
-//
+//		
 //		Number idx = holder.getKey();
 //		member.setIdx(idx.intValue());
-
+		
 		return resultCnt;
 
 	}

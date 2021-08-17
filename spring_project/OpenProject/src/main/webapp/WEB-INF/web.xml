@@ -8,12 +8,8 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
 	</context-param>
-    <context-param>
-        <param-name>javax.faces.CONFIG_FILES</param-name>
-        <param-value>/com/bitcamp/op/member/dao/mapper/memberMapper.xml</param-value>
-    </context-param>
-
-    <!-- Creates the Spring Container shared by all Servlets and Filters -->
+	
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -33,12 +29,8 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
-    </servlet-mapping>
-
-    <!-- 데이터 베이스 드라이버 로더 -->
+	
+	<!-- 데이터 베이스 드라이버 로더 -->
 	
 	<servlet>
 		<servlet-name>DriverLoader</servlet-name>
@@ -49,11 +41,17 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-    <servlet>
-        <servlet-name>Faces Servlet</servlet-name>
-        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 </web-app>
